@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HappyCare · เส้นทางพยาบาลไทย สู่ชีวิตใหม่ในออสเตรีย</title>
+<meta name="description" content="โครงการพยาบาลไทยสู่ประเทศออสเตรีย โดย Happycare Recruitment GmbH องค์กรจัดหางานที่จดทะเบียนถูกต้องในออสเตรีย เรียนภาษาเยอรมันที่กรุงเทพฯ ดูแลวีซ่า ที่พัก และการย้ายครบวงจร โดยคุณไม่ต้องจ่ายค่าดำเนินการ">
+<meta property="og:title" content="HappyCare · เส้นทางพยาบาลไทย สู่ชีวิตใหม่ในออสเตรีย">
+<meta property="og:description" content="องค์กรจัดหางานสัญชาติออสเตรีย จดทะเบียนถูกต้อง · ดูแลคุณตั้งแต่วันแรกจนถึงการทำงาน · คุณไม่ต้องจ่ายค่าดำเนินการ">
+<meta property="og:image" content="assets/thailand-nurse-portrait.jpg">
+<meta name="theme-color" content="#06513F">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Google Fonts (Kanit, Noto Sans Thai, Montserrat, Poppins) จะโหลดหลังจากได้รับความยินยอม ดู cookie banner -->
+<style>
+  :root{
+    --forest:#06513F;
+    --deep:#0C5C4B;
+    --emerald:#0F7B68;
+    --mint:#41A99A;
+    --soft-teal:#6BC1B3;
+    --white:#F8F8F5;
+    --light-gray:#E9ECE7;
+    --lime:#C9E54E;
+    --fresh-lime:#D7EC5A;
+    --charcoal:#213A34;
+    --divider:#D7DDD8;
+    --shadow:rgba(6,81,63,0.12);
+    --grad-green:linear-gradient(135deg,#06513F 0%,#0F7B68 100%);
+    --grad-dark:linear-gradient(180deg,#044636 0%,#0C5C4B 100%);
+    --maxw:1180px;
+    --pad:28px;
+    --head:'Kanit',sans-serif;
+    --body:'Kanit',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;width:100%}
+  body{
+    font-family:var(--body);font-weight:300;color:var(--charcoal);background:var(--white);
+    line-height:1.75;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;width:100%;position:relative;
+  }
+  section,footer{max-width:100%;overflow-x:clip}
+  h1,h2,h3,h4,.eyebrow,.btn,.logo,.stat-num,.nav-cta,.big{font-family:var(--head)}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---- Language toggle visibility ---- */
+  [data-lang="th"] .en{display:none}
+  [data-lang="en"] .th{display:none}
+
+  .eyebrow{
+    font-weight:600;font-size:clamp(12px,1.4vw,13px);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--emerald);margin-bottom:16px;
+  }
+  .eyebrow.on-dark{color:var(--lime)}
+  .eyebrow.center{justify-content:center}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:11px;
+    font-weight:600;font-size:15px;letter-spacing:.02em;
+    padding:16px 30px;border-radius:50px;cursor:pointer;border:none;min-height:54px;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+    box-shadow:0 10px 26px rgba(6,81,63,.22);
+  }
+  .btn svg{width:18px;height:18px;flex-shrink:0}
+  .btn-primary{background:var(--forest);color:var(--lime)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(6,81,63,.32);background:#054634}
+  .btn-lime{background:var(--lime);color:var(--forest)}
+  .btn-lime:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(201,229,78,.45);background:var(--fresh-lime)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:2px solid rgba(255,255,255,.4);box-shadow:none}
+  .btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(248,248,245,.88);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--divider);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .logo img{height:42px;width:auto;max-width:200px;object-fit:contain;display:block}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a:not(.nav-cta){font-weight:500;font-size:15px;color:var(--charcoal);transition:color .15s}
+  .nav-links a:not(.nav-cta):hover{color:var(--emerald)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  /* Language switch */
+  .lang{display:inline-flex;border:1.5px solid var(--divider);border-radius:50px;overflow:hidden;background:#fff}
+  .lang button{font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.03em;
+    padding:8px 13px;border:none;background:transparent;color:var(--charcoal);cursor:pointer;transition:background .15s,color .15s}
+  [data-lang="th"] .lang button[data-set="th"],[data-lang="en"] .lang button[data-set="en"]{background:var(--forest);color:var(--lime)}
+  .nav-cta{
+    font-family:var(--head);font-weight:600;font-size:13.5px;letter-spacing:.02em;
+    background:var(--forest);color:var(--lime);padding:12px 22px;border-radius:50px;
+    transition:transform .18s,background .18s;white-space:nowrap;
+  }
+  .nav-cta:hover{transform:translateY(-2px);background:#054634}
+  /* Mobile hamburger + drawer */
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;
+    border:none;background:none;cursor:pointer;padding:11px 8px;flex-shrink:0}
+  .nav-toggle span{display:block;height:2.5px;width:100%;background:var(--forest);border-radius:2px;
+    transition:transform .25s ease,opacity .2s ease}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .mobile-nav{display:none}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;color:#fff;isolation:isolate;
+    background:#06513F url('assets/thailand-nurse-portrait.jpg') center/cover no-repeat;}
+  .hero-scrim{position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg,transparent 55%,rgba(4,54,42,.7) 100%),
+      linear-gradient(100deg,rgba(4,54,42,.96) 0%,rgba(6,81,63,.9) 40%,rgba(6,81,63,.62) 70%,rgba(15,123,104,.42) 100%);}
+  .hero-dots{position:absolute;inset:0;z-index:-1;opacity:.4;
+    background-image:radial-gradient(rgba(255,255,255,.08) 1.4px,transparent 1.4px);background-size:22px 22px;}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center;padding:80px var(--pad) 90px}
+  .hero h1{font-weight:800;font-size:clamp(31px,4.4vw,54px);line-height:1.1;letter-spacing:0}
+  .hero h1 .hl{color:var(--lime)}
+  .hero p.lede{font-size:clamp(16px,1.9vw,19px);color:rgba(255,255,255,.9);margin:22px 0 32px;max-width:560px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-trust{display:flex;gap:14px 24px;margin-top:34px;flex-wrap:wrap}
+  .hero-trust div{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.9);font-weight:400}
+  .hero-trust svg{width:19px;height:19px;color:var(--lime);flex-shrink:0}
+  .hero-card{
+    background:rgba(6,40,32,.44);border:1px solid rgba(255,255,255,.2);
+    border-radius:26px;padding:32px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    box-shadow:0 30px 70px rgba(0,0,0,.34);
+  }
+  .hero-card .hc-head{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:600;font-size:16.5px;color:#fff;margin-bottom:20px}
+  .hero-card .hc-ic{width:36px;height:36px;border-radius:11px;background:rgba(201,229,78,.16);display:grid;place-items:center;flex-shrink:0}
+  .hero-card .hc-ic svg{width:20px;height:20px;color:var(--lime)}
+  .hero-card .hc-foot{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:14.5px;color:rgba(255,255,255,.92)}
+  .hero-card .hc-foot b{color:var(--lime);font-weight:600}
+  .hero-card ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .hero-card li{display:flex;gap:13px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.94)}
+  .hero-card li .dot{width:26px;height:26px;border-radius:50%;background:rgba(201,229,78,.18);display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+  .hero-card li .dot svg{width:15px;height:15px;color:var(--lime)}
+
+  /* Credibility strip */
+  .strip{background:var(--forest);color:rgba(255,255,255,.74);padding:16px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .strip .wrap{display:flex;align-items:center;justify-content:center;gap:12px 16px;flex-wrap:wrap;font-size:14px;font-weight:400;text-align:center}
+  .strip b{color:var(--lime);font-weight:600}
+  .strip .sep{width:5px;height:5px;border-radius:50%;background:var(--mint);opacity:.6}
+
+  /* ===== Featured commercial / film ===== */
+  .film{background:var(--grad-dark);color:#fff;position:relative;overflow:hidden}
+  .film::before{content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1.3px,transparent 1.3px);background-size:24px 24px;opacity:.5}
+  .film .wrap{position:relative}
+  .film .sec-head h2{color:#fff}
+  .film .sec-head p{color:rgba(255,255,255,.8)}
+  .film-player{position:relative;max-width:1000px;margin:0 auto;border-radius:22px;overflow:hidden;
+    aspect-ratio:1280/544;background:#000;box-shadow:0 40px 90px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.14)}
+  .film-player video{width:100%;height:100%;object-fit:cover;display:block}
+  .film-player::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(4,54,42,.12),rgba(4,54,42,.5));transition:opacity .3s}
+  .film-player.playing::after{opacity:0}
+  .film-play{position:absolute;inset:0;margin:auto;z-index:2;width:84px;height:84px;border-radius:50%;border:none;cursor:pointer;
+    background:var(--lime);color:var(--forest);display:grid;place-items:center;box-shadow:0 14px 40px rgba(0,0,0,.5);transition:transform .2s,background .2s}
+  .film-play svg{width:30px;height:30px;margin-left:4px}
+  .film-play:hover{transform:scale(1.08);background:var(--fresh-lime)}
+  .film-player.playing .film-play{display:none}
+  .film-badge{position:absolute;left:18px;top:18px;z-index:3;background:rgba(4,54,42,.66);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;border-radius:30px;padding:8px 15px;
+    font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+  .film-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);flex-shrink:0}
+  .film-player.playing .film-badge{opacity:0;transition:opacity .3s}
+
+  /* Live classroom video badge (school collage) */
+  .collage .c video{width:100%;height:100%;object-fit:cover;display:block}
+  .live-badge{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(4,54,42,.74);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;border-radius:30px;padding:7px 13px 7px 11px;
+    font-family:var(--head);font-weight:500;font-size:11.5px;letter-spacing:.01em;display:flex;align-items:center;gap:8px}
+  .live-badge .rdot{width:8px;height:8px;border-radius:50%;background:#ff5a5a;flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(255,90,90,.6);animation:livepulse 2.2s infinite}
+  @keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(255,90,90,.6)}70%{box-shadow:0 0 0 9px rgba(255,90,90,0)}100%{box-shadow:0 0 0 0 rgba(255,90,90,0)}}
+
+  /* Section base */
+  section{padding:clamp(56px,8vw,90px) 0}
+  .sec-head{max-width:780px;margin:0 auto clamp(38px,5vw,54px);text-align:center}
+  h2{font-weight:700;font-size:clamp(25px,3.4vw,40px);line-height:1.2;color:var(--forest);letter-spacing:0;text-wrap:balance}
+  .sec-head p{font-size:clamp(16px,1.9vw,18px);color:#4a5d56;margin-top:16px;font-weight:300}
+  .sec-head .eyebrow{margin-bottom:16px}
+
+  /* ===== Trust / "is this legit" proof tiles ===== */
+  .trust{background:var(--light-gray)}
+  .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .proof{background:#fff;border:1px solid var(--divider);border-radius:22px;padding:32px 26px;
+    transition:transform .2s,box-shadow .2s,border-color .2s}
+  .proof:hover{transform:translateY(-5px);box-shadow:0 22px 44px var(--shadow);border-color:var(--soft-teal)}
+  .proof .ico{width:56px;height:56px;border-radius:16px;background:rgba(201,229,78,.2);display:grid;place-items:center;margin-bottom:18px}
+  .proof .ico svg{width:28px;height:28px;color:var(--emerald)}
+  .proof h3{font-weight:600;font-size:18px;color:var(--forest);margin-bottom:9px}
+  .proof p{font-size:14.5px;color:#54675f;font-weight:300}
+
+  /* ===== Who we are ===== */
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,56px);align-items:center}
+  .about-media{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px var(--shadow);aspect-ratio:16/9;background:#04382b}
+  .about-media video{width:100%;height:100%;object-fit:cover;display:block}
+  .about-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(4,54,42,0) 55%,rgba(4,54,42,.4));transition:opacity .3s}
+  .about-media.playing::after{opacity:0}
+  .vt-play{position:absolute;inset:0;margin:auto;z-index:2;width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;
+    background:var(--lime);color:var(--forest);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .2s,background .2s}
+  .vt-play svg{width:26px;height:26px;margin-left:3px}
+  .vt-play:hover{transform:scale(1.09);background:var(--fresh-lime)}
+  .about-media.playing .vt-play{display:none}
+  .about-media .cap{position:absolute;left:18px;bottom:18px;z-index:3;background:rgba(4,54,42,.72);backdrop-filter:blur(6px);
+    color:#fff;border-radius:14px;padding:10px 16px;font-size:13.5px;font-weight:400}
+  .about-media .cap b{color:var(--lime);font-weight:600;display:block;font-family:var(--head)}
+  .about-copy h2{margin-bottom:18px}
+  .about-copy p{font-size:15.5px;color:#3d524b;font-weight:300;margin-bottom:16px}
+  .about-facts{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:22px}
+  .about-facts li{display:flex;gap:13px;align-items:flex-start;font-size:15px;color:#3d524b}
+  .about-facts .ck{width:26px;height:26px;border-radius:50%;background:rgba(201,229,78,.25);display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+  .about-facts .ck svg{width:15px;height:15px;color:var(--emerald)}
+  .about-facts b{font-weight:600;color:var(--forest)}
+
+  /* Team */
+  .team{background:var(--light-gray)}
+  .team-group{margin-bottom:48px}
+  .team-group:last-child{margin-bottom:0}
+  .team-group-head{font-family:var(--head);font-weight:600;font-size:16px;color:var(--emerald);
+    text-align:center;margin-bottom:26px;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:11px}
+  .team-group-head .fl{font-size:22px;line-height:1}
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .team-grid.two{grid-template-columns:repeat(2,1fr);max-width:600px;margin:0 auto}
+  .team-grid.three{grid-template-columns:repeat(3,1fr);max-width:920px;margin:0 auto}
+  .member.teachers .photo{background:linear-gradient(160deg,#0b5947 0%,#063d2f 100%);display:grid;place-items:center}
+  .tc{text-align:center;color:#fff}
+  .tc-ic{width:92px;height:92px;border-radius:50%;background:rgba(201,229,78,.14);border:1.5px solid rgba(201,229,78,.45);display:grid;place-items:center;margin:0 auto 18px}
+  .tc-ic svg{width:46px;height:46px;color:var(--lime)}
+  .tc-num{font-family:var(--head);font-weight:800;font-size:50px;color:var(--lime);line-height:1;letter-spacing:.01em}
+  .member{background:#fff;border:1px solid var(--divider);border-radius:20px;overflow:hidden;text-align:center;
+    transition:transform .2s,box-shadow .2s,border-color .2s}
+  .member:hover{transform:translateY(-6px);box-shadow:0 24px 46px var(--shadow);border-color:var(--soft-teal)}
+  .member .photo{aspect-ratio:4/5;overflow:hidden;position:relative;
+    background:linear-gradient(160deg, #eceae6 0%, #dcdad5 100%)}
+  .member .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .member .photo.ini{display:grid;place-items:center;font-family:var(--head);font-weight:700;font-size:62px;color:rgba(255,255,255,.9);letter-spacing:.02em}
+  .member h3{font-weight:600;font-size:16.5px;color:var(--forest);margin:16px 14px 4px}
+  .member p{font-size:13px;color:#6a7a73;font-weight:300;margin:0 14px 18px;line-height:1.45}
+
+  /* ===== Opportunity ===== */
+  .opp-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(34px,5vw,54px);align-items:center}
+  .opp-photos{position:relative;height:clamp(380px,46vw,480px)}
+  .opp-photo{position:absolute;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px var(--shadow)}
+  .opp-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+  .opp-photo:hover img{transform:scale(1.06)}
+  .opp-a{top:0;left:0;width:64%;height:60%;z-index:2}
+  .opp-b{top:12%;right:0;width:46%;height:52%;z-index:3}
+  .opp-c{bottom:0;left:16%;width:56%;height:46%;z-index:1}
+  .opp-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--forest);color:#fff;border-radius:60px;
+    padding:12px 20px;display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:600;font-size:13px;
+    letter-spacing:.03em;white-space:nowrap;box-shadow:0 20px 40px rgba(0,0,0,.34);z-index:5;border:1px solid rgba(255,255,255,.18)}
+  .opp-tag svg{width:16px;height:16px;color:var(--lime)}
+  .money{background:#fff;border:1px solid var(--divider);border-radius:26px;padding:clamp(28px,3.5vw,38px);
+    box-shadow:0 28px 60px var(--shadow);display:flex;flex-direction:column;gap:22px;position:relative}
+  .money::before{content:"";position:absolute;left:0;top:32px;bottom:32px;width:4px;border-radius:4px;
+    background:linear-gradient(180deg,var(--lime),var(--mint))}
+  .money-row{padding-left:16px}
+  .money-row .n{font-family:var(--head);font-weight:800;font-size:clamp(34px,4.4vw,46px);color:var(--emerald);line-height:1}
+  .money-row .n span{font-size:.5em;font-weight:600}
+  .money-row b{display:block;font-weight:600;font-size:15.5px;color:var(--forest);margin-top:6px}
+  .money-row small{font-size:13px;color:#6a7a73;font-weight:300;line-height:1.5;display:block;margin-top:2px}
+  .money-row + .money-row{border-top:1px solid var(--divider);padding-top:22px}
+  .money-row-plain b{font-size:16.5px}
+  .money-note{font-size:12px;color:#8a978f;font-weight:300;line-height:1.55;margin-top:15px;padding-left:2px}
+  .opp-right{display:flex;flex-direction:column}
+
+  /* ===== Full-service grid ===== */
+  .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .ben{background:#fff;border:1px solid var(--divider);border-radius:22px;padding:30px 28px;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .ben:hover{transform:translateY(-5px);box-shadow:0 22px 44px var(--shadow);border-color:var(--soft-teal)}
+  .ben .ico{width:54px;height:54px;border-radius:15px;background:rgba(201,229,78,.18);display:grid;place-items:center;margin-bottom:18px}
+  .ben .ico svg{width:27px;height:27px;color:var(--emerald)}
+  .ben h3{font-weight:600;font-size:18px;color:var(--forest);margin-bottom:8px}
+  .ben p{font-size:14.5px;color:#54675f;font-weight:300}
+
+  /* ===== German school split ===== */
+  .school{background:var(--light-gray)}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,58px);align-items:center}
+  .collage{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:4/3}
+  .collage .c{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 44px var(--shadow)}
+  .collage .c img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .collage .c:hover img{transform:scale(1.05)}
+  .collage .c-main{grid-row:1 / span 2}
+  .check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:22px}
+  .check-list li{display:flex;gap:13px;align-items:flex-start;font-size:15.5px;color:#3d524b;font-weight:300}
+  .check-list .ck{width:26px;height:26px;border-radius:50%;background:rgba(201,229,78,.25);display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+  .check-list .ck svg{width:15px;height:15px;color:var(--emerald)}
+
+  /* ===== Process ===== */
+  .process{background:var(--grad-dark);color:#fff;position:relative;overflow:hidden}
+  .process::before{content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.06) 1.3px,transparent 1.3px);background-size:24px 24px;opacity:.5}
+  .process .wrap{position:relative}
+  .process .sec-head h2{color:#fff}
+  .process .sec-head p{color:rgba(255,255,255,.8)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px 24px}
+  .step .num{width:46px;height:46px;border-radius:14px;background:var(--lime);color:var(--forest);
+    font-family:var(--head);font-weight:800;font-size:20px;display:grid;place-items:center;margin-bottom:16px}
+  .step h3{font-weight:600;font-size:16.5px;color:#fff;margin-bottom:9px}
+  .step p{font-size:13.5px;color:rgba(255,255,255,.82);font-weight:300}
+  .step .when{display:inline-block;margin-top:12px;font-size:12px;color:var(--lime);font-weight:500;
+    border:1px solid rgba(201,229,78,.4);border-radius:30px;padding:4px 11px}
+  .process-foot{text-align:center;margin-top:44px;font-size:clamp(15px,2vw,17px);color:rgba(255,255,255,.92);font-weight:300}
+  .process-foot b{color:var(--lime);font-weight:600}
+
+  /* ===== Requirements ===== */
+  /* Eligibility callout — the one hard entry requirement */
+  .eligibility{background:linear-gradient(155deg,var(--forest) 0%,var(--emerald) 100%);border-radius:24px;
+    padding:clamp(26px,3.4vw,38px);margin-bottom:clamp(28px,4vw,44px);box-shadow:0 20px 46px rgba(6,81,63,.22)}
+  .eligibility .elig-badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+    letter-spacing:.04em;text-transform:uppercase;color:var(--forest);background:var(--lime);border-radius:30px;padding:6px 15px;margin-bottom:16px}
+  .eligibility .elig-badge svg{width:15px;height:15px}
+  .eligibility h3{font-weight:700;font-size:clamp(19px,2.5vw,24px);color:#fff;line-height:1.4;margin-bottom:16px}
+  .eligibility h3 b{color:var(--lime)}
+  .eligibility .elig-not{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);border-radius:15px;padding:15px 19px;font-size:14.5px;color:rgba(255,255,255,.9);font-weight:300;line-height:1.65}
+  .eligibility .elig-not svg{width:21px;height:21px;color:#ffd7c2;flex-shrink:0;margin-top:1px}
+  .eligibility .elig-not b{color:#fff;font-weight:600}
+  .req-sub{font-size:13px;color:#6b8079;font-weight:400;margin:-8px 0 16px}
+  .req-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,44px);align-items:start}
+  .req-card{background:#fff;border:1px solid var(--divider);border-radius:24px;padding:clamp(28px,3.5vw,38px);box-shadow:0 18px 40px var(--shadow)}
+  .req-card h3{font-weight:600;font-size:19px;color:var(--forest);margin-bottom:18px;display:flex;align-items:center;gap:11px}
+  .req-card h3 svg{width:24px;height:24px;color:var(--emerald)}
+  .req-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+  .req-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#3d524b;font-weight:300}
+  .req-list .ck{width:24px;height:24px;border-radius:50%;background:rgba(201,229,78,.25);display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+  .req-list .ck svg{width:14px;height:14px;color:var(--emerald)}
+  .req-list b{font-weight:600;color:var(--forest)}
+  .req-sub b{font-weight:600;color:var(--emerald)}
+  .honest{grid-column:1 / -1;background:var(--light-gray);border:1px solid var(--divider);border-radius:20px;padding:26px 30px;margin-top:4px}
+  .honest h4{font-weight:600;font-size:16px;color:var(--forest);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .honest h4 svg{width:20px;height:20px;color:var(--emerald)}
+  .honest p{font-size:14.5px;color:#4a5d56;font-weight:300}
+
+  /* ===== Cohort ===== */
+  /* Peace of mind */
+  .assured{background:var(--light-gray)}
+  .assured-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:940px;margin:0 auto}
+  .assured-card{background:#fff;border:1px solid var(--divider);border-radius:22px;padding:36px 34px;
+    transition:transform .2s,box-shadow .2s,border-color .2s}
+  .assured-card:hover{transform:translateY(-5px);box-shadow:0 22px 44px var(--shadow);border-color:var(--soft-teal)}
+  .assured-card .ico{width:60px;height:60px;border-radius:16px;background:rgba(201,229,78,.2);display:grid;place-items:center;margin-bottom:20px}
+  .assured-card .ico svg{width:30px;height:30px;color:var(--emerald)}
+  .assured-card h3{font-weight:600;font-size:19px;color:var(--forest);margin-bottom:11px}
+  .assured-card p{font-size:15px;color:#54675f;font-weight:300;line-height:1.7}
+
+  /* ===== FAQ ===== */
+  .faq-wrap{max-width:860px;margin:0 auto}
+  .faq-search{position:relative;margin-bottom:26px}
+  .faq-search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:19px;height:19px;color:var(--mint)}
+  .faq-search input{width:100%;font-family:var(--body);font-size:15px;color:var(--charcoal);
+    padding:15px 18px 15px 46px;border:1.5px solid var(--divider);border-radius:50px;background:#fff;transition:border-color .15s,box-shadow .15s}
+  .faq-search input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(15,123,104,.14)}
+  .faq-tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;margin-bottom:12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .faq-tabs::-webkit-scrollbar{display:none}
+  .faq-tab{flex:0 0 auto;font-family:var(--head);font-weight:500;font-size:13.5px;padding:10px 18px;border-radius:50px;
+    border:1.5px solid var(--divider);background:#fff;color:var(--charcoal);cursor:pointer;white-space:nowrap;
+    transition:background .15s,border-color .15s,color .15s}
+  .faq-tab:hover{border-color:var(--mint)}
+  .faq-tab.active{background:var(--forest);border-color:var(--forest);color:var(--lime)}
+  .faq-group{margin-bottom:26px}
+  .faq-group > h3{font-family:var(--head);font-weight:600;font-size:15px;color:var(--emerald);letter-spacing:.04em;
+    text-transform:uppercase;margin:0 4px 12px}
+  details{background:#fff;border:1px solid var(--divider);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+  details[open]{box-shadow:0 16px 34px var(--shadow);border-color:var(--soft-teal)}
+  summary{list-style:none;cursor:pointer;padding:20px 24px;font-family:var(--head);font-weight:500;font-size:clamp(15px,2vw,16.5px);
+    color:var(--forest);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary .chev{width:30px;height:30px;border-radius:50%;background:rgba(201,229,78,.2);display:grid;place-items:center;flex-shrink:0;transition:transform .25s}
+  summary .chev svg{width:16px;height:16px;color:var(--emerald)}
+  details[open] summary .chev{transform:rotate(180deg)}
+  details .answer{padding:0 24px 22px;font-size:15px;color:#54675f;font-weight:300;line-height:1.7}
+  .faq-empty{text-align:center;color:#6a7a73;font-weight:300;padding:20px}
+
+  /* ===== CTA + form ===== */
+  .cta{background:var(--grad-green);color:#fff;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.4px,transparent 1.4px);background-size:22px 22px;opacity:.5}
+  .cta-grid{position:relative;display:grid;grid-template-columns:1fr .95fr;gap:clamp(32px,5vw,54px);align-items:center}
+  .cta h2{color:#fff;font-size:clamp(27px,3.8vw,42px)}
+  .cta h2 .hl{color:var(--lime)}
+  .cta p{font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.9);margin:18px 0 26px;max-width:520px;font-weight:300}
+  .cta-contacts{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+  .cta-contacts a{display:inline-flex;align-items:center;gap:13px;font-size:15px;color:#fff;font-weight:300;transition:color .15s}
+  .cta-contacts a:hover{color:var(--lime)}
+  .cta-contacts .ci{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+    display:grid;place-items:center;flex-shrink:0}
+  .cta-contacts .ci svg{width:20px;height:20px;color:var(--lime)}
+  .lead-form{background:#fff;border-radius:26px;padding:clamp(24px,3vw,34px);box-shadow:0 30px 64px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.5)}
+  .lead-form h3{font-family:var(--head);font-weight:700;font-size:clamp(19px,2.4vw,22px);color:var(--forest);margin-bottom:5px}
+  .lead-form .lf-sub{font-size:14px;color:#54675f;margin-bottom:20px;line-height:1.5;font-weight:300}
+  .field{margin-bottom:14px}
+  .field > label{display:block;font-weight:500;font-size:13.5px;color:var(--charcoal);margin-bottom:7px}
+  .field .req{color:var(--emerald)}
+  .field-hint{margin-top:7px;font-size:12.5px;color:var(--mint);font-weight:400;line-height:1.5}
+  .lead-form input,.lead-form select,.lead-form textarea{
+    width:100%;font-family:var(--body);font-size:15px;color:var(--charcoal);
+    padding:12px 14px;border:1.5px solid var(--divider);border-radius:12px;background:#fff;
+    transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;
+  }
+  .lead-form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F7B68' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;background-size:17px;padding-right:40px}
+  .lead-form textarea{min-height:78px;resize:vertical}
+  .lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(15,123,104,.14)}
+  .lead-form input::placeholder,.lead-form textarea::placeholder{color:#9aa8a2}
+  .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:6px 0 18px;font-size:12.5px;color:#54675f;line-height:1.5;font-weight:300}
+  .consent input{margin-top:2px;width:17px;height:17px;flex-shrink:0;accent-color:var(--forest)}
+  .consent .link-btn{color:var(--emerald);text-decoration:underline;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .lead-form .btn{width:100%}
+  .lf-fineprint{font-size:11.5px;color:#8a978f;text-align:center;margin-top:12px;font-weight:300}
+  .hp-field{position:absolute!important;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+  .lf-error{display:none;background:rgba(190,55,55,.08);border:1px solid rgba(190,55,55,.32);color:#a83232;border-radius:12px;padding:12px 14px;font-size:13.5px;margin-bottom:14px;line-height:1.5}
+  .lf-error a{color:#a83232;text-decoration:underline}
+  .form-success{background:#fff;border-radius:26px;padding:clamp(32px,4vw,48px) clamp(24px,3vw,40px);text-align:center;box-shadow:0 30px 64px rgba(0,0,0,.34)}
+  .form-success .fs-ic{width:64px;height:64px;border-radius:50%;background:rgba(201,229,78,.28);display:grid;place-items:center;margin:0 auto 20px}
+  .form-success .fs-ic svg{width:32px;height:32px;color:var(--emerald)}
+  .form-success h3{font-family:var(--head);font-weight:700;font-size:clamp(21px,3vw,25px);color:var(--forest);margin-bottom:11px}
+  .form-success p{font-size:15.5px;color:#54675f;line-height:1.6;max-width:360px;margin:0 auto;font-weight:300}
+  .fs-line{margin-top:24px;padding-top:22px;border-top:1px solid var(--divider)}
+  .fs-line-label{font-size:14px !important;color:#3d524b !important;margin-bottom:14px !important}
+  .line-btn-official{display:inline-block;transition:transform .18s ease,filter .18s ease}
+  .line-btn-official:hover{transform:translateY(-2px);filter:brightness(1.03)}
+  .line-btn-official img{height:52px;width:auto;display:block;margin:0 auto;border-radius:8px}
+
+  /* Footer */
+  footer{background:#04382B;color:rgba(255,255,255,.76);padding:56px 0 30px;font-size:14.5px;font-weight:300}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-logo{height:46px;width:auto;display:block;margin-bottom:18px}
+  footer p{max-width:340px;line-height:1.7}
+  .foot-col h4{font-family:var(--head);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--lime);margin-bottom:16px}
+  .foot-col a,.foot-col address{display:block;color:rgba(255,255,255,.76);margin-bottom:10px;font-style:normal;transition:color .15s}
+  .foot-col a:hover{color:var(--lime)}
+  .foot-socials{display:flex;gap:10px;margin-top:6px}
+  .foot-socials a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+    display:grid;place-items:center;margin:0}
+  .foot-socials a:hover{background:rgba(201,229,78,.16)}
+  .foot-socials svg{width:19px;height:19px;color:#fff}
+  /* LINE QR band */
+  .foot-line{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;
+    background:linear-gradient(135deg,rgba(6,199,85,.12),rgba(255,255,255,.04));
+    border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px 36px;margin:30px 0}
+  .foot-line-text{flex:1;min-width:250px}
+  .foot-line .fl-logo{display:inline-flex;align-items:center;gap:9px;color:#06C755;
+    font-family:var(--head);font-weight:800;font-size:21px;letter-spacing:.02em;margin-bottom:12px}
+  .foot-line .fl-logo svg{width:27px;height:27px}
+  .foot-line h4{font-family:var(--head);color:#fff;font-size:clamp(18px,2.4vw,21px);font-weight:600;margin-bottom:9px}
+  .foot-line p{color:rgba(255,255,255,.74);font-size:14.5px;font-weight:300;line-height:1.65;margin:0 0 18px;max-width:420px}
+  .foot-line .line-add-btn{display:inline-block;transition:transform .18s ease,filter .18s ease}
+  .foot-line .line-add-btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+  .foot-line .line-add-btn img{height:48px;width:auto;display:block;border-radius:8px}
+  .foot-line-qr{flex-shrink:0;background:#fff;border-radius:18px;padding:15px 15px 11px;text-align:center;
+    box-shadow:0 16px 34px rgba(0,0,0,.26)}
+  .foot-line-qr img{width:180px;height:180px;display:block}
+  .foot-line-qr span{display:block;margin-top:9px;color:#06513F;font-size:12.5px;font-weight:500}
+  .foot-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,.5);align-items:center}
+  .foot-legal{display:flex;gap:18px;flex-wrap:wrap}
+  .foot-legal button{background:none;border:none;color:rgba(255,255,255,.62);font-size:13px;cursor:pointer;
+    text-decoration:underline;text-decoration-color:rgba(255,255,255,.22);transition:color .15s;padding:0;font-family:var(--body);font-weight:300}
+  .foot-legal button:hover{color:var(--lime)}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:44px var(--pad) 60px}
+    .hero-card{max-width:100%}
+    .proof-grid,.team-grid{grid-template-columns:repeat(2,1fr)}
+    .team-grid.three{grid-template-columns:repeat(2,1fr);max-width:600px}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .about-grid,.opp-grid,.cta-grid{grid-template-columns:1fr}
+    .about-media,.opp-photos{order:-1}
+    .cta-media{max-width:520px}
+  }
+  @media(max-width:860px){
+    .nav-links,.lang-desktop{display:none}
+    .nav-toggle{display:flex}
+    .mobile-nav{display:flex;flex-direction:column;gap:2px;
+      position:absolute;top:100%;left:0;right:0;
+      background:rgba(248,248,245,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--divider);box-shadow:0 24px 44px rgba(6,81,63,.16);
+      padding:12px 20px 22px;
+      transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;
+      transition:opacity .25s ease,transform .25s ease,visibility .25s}
+    .mobile-nav.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+    .mobile-nav a:not(.btn){padding:15px 4px;font-size:16px;font-weight:500;color:var(--charcoal);border-bottom:1px solid var(--light-gray)}
+    .mobile-nav .lang{align-self:flex-start;margin:16px 0 6px}
+    .mobile-nav .lang button{padding:9px 16px;font-size:13.5px}
+    .mobile-nav .btn{margin-top:10px}
+    .ben-grid{grid-template-columns:1fr 1fr}
+    .split{grid-template-columns:1fr}
+    .collage{order:-1}
+    .req-grid,.assured-grid{grid-template-columns:1fr}
+    .film-play{width:64px;height:64px}
+    .film-play svg{width:24px;height:24px}
+    .film-badge{font-size:11px;padding:7px 12px;top:12px;left:12px}
+  }
+  @media(max-width:680px){
+    .ben-grid{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    .hero-trust{gap:12px 18px}
+    .foot-line{flex-direction:column;text-align:center;padding:28px 24px;gap:26px}
+    .foot-line-text{min-width:0}
+    .foot-line .fl-logo{margin-bottom:10px}
+    .foot-line p{margin-left:auto;margin-right:auto}
+    .foot-line .line-add-btn img{margin:0 auto}
+  }
+  @media(max-width:480px){
+    :root{--pad:18px}
+    .steps{grid-template-columns:1fr}
+    .fld-row{grid-template-columns:1fr}
+    .btn{width:100%}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .nav{height:62px;gap:8px}
+    .logo img{height:34px;max-width:140px}
+    .nav-cta{padding:10px 14px;font-size:12px}
+    .lang button{padding:7px 10px}
+    .mobile-nav{top:62px}
+    section{padding:clamp(46px,11vw,64px) 0}
+    .sec-head{margin-bottom:32px}
+    .hero h1{font-size:clamp(29px,8.5vw,40px)}
+    .hero-card{padding:26px 22px}
+    .member{padding:22px 14px}
+    .member .av{width:66px;height:66px;font-size:22px;margin-bottom:12px}
+    .member h3{font-size:15px}
+    .member p{font-size:12.5px}
+    .team-grid{gap:14px}
+    .money-row .n{font-size:38px}
+    .film-play{width:58px;height:58px}
+  }
+
+  /* ---------- Cookie banner & modals ---------- */
+  .cookie-banner{position:fixed;bottom:18px;left:18px;right:18px;max-width:460px;margin-left:auto;
+    background:#fff;border:1px solid var(--divider);border-radius:18px;box-shadow:0 24px 50px rgba(6,81,63,.22);
+    padding:22px 24px;font-size:13.5px;color:#3d524b;z-index:200;font-weight:300;
+    transform:translateY(140%);transition:transform .55s cubic-bezier(.16,.84,.44,1)}
+  .cookie-banner.show{transform:translateY(0)}
+  .cookie-banner h4{font-family:var(--head);font-weight:600;font-size:14.5px;color:var(--forest);margin-bottom:8px;letter-spacing:.02em}
+  .cookie-banner p{margin-bottom:14px;line-height:1.55}
+  .cookie-banner .link-btn{color:var(--emerald);text-decoration:underline;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .cookie-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .btn-ck{font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.02em;
+    padding:11px 18px;border-radius:36px;border:none;cursor:pointer;transition:transform .15s,background .15s,border-color .15s,color .15s}
+  .btn-ck-accept{background:var(--forest);color:var(--lime);box-shadow:0 6px 16px rgba(6,81,63,.18)}
+  .btn-ck-accept:hover{transform:translateY(-2px);background:#054634}
+  .btn-ck-reject{background:#fff;color:var(--forest);border:1.5px solid var(--divider)}
+  .btn-ck-reject:hover{border-color:var(--soft-teal)}
+  .modal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
+    background:rgba(4,40,30,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    opacity:0;pointer-events:none;transition:opacity .3s ease;padding:24px}
+  .modal.open{opacity:1;pointer-events:auto}
+  .modal-card{background:#fff;border-radius:22px;max-width:720px;width:100%;max-height:86vh;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 30px 70px rgba(0,0,0,.4);transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.16,.84,.44,1)}
+  .modal.open .modal-card{transform:translateY(0) scale(1)}
+  .modal-head{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;border-bottom:1px solid var(--divider);flex-shrink:0}
+  .modal-head h3{font-family:var(--head);font-weight:700;color:var(--forest);font-size:17px;letter-spacing:.02em}
+  .modal-close{width:36px;height:36px;border-radius:50%;background:var(--light-gray);border:none;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s;flex-shrink:0}
+  .modal-close:hover{background:var(--divider);transform:rotate(90deg)}
+  .modal-close svg{width:18px;height:18px;color:var(--charcoal)}
+  .modal-body{padding:24px 26px;overflow-y:auto;font-size:14.5px;line-height:1.7;color:#3d524b;font-weight:300}
+  .modal-body h4{font-family:var(--head);font-weight:600;color:var(--forest);font-size:14.5px;margin:20px 0 9px;letter-spacing:.02em}
+  .modal-body h4:first-child{margin-top:0}
+  .modal-body p{margin-bottom:12px}
+  .modal-body strong{color:var(--forest);font-weight:600}
+  .modal-body a{color:var(--emerald);text-decoration:underline}
+  .modal-body address{font-style:normal;background:var(--light-gray);padding:14px 18px;border-radius:12px;display:block;margin-bottom:14px;line-height:1.6}
+  @media(max-width:520px){
+    .cookie-banner{left:12px;right:12px;bottom:12px;padding:18px 20px;border-radius:16px}
+    .modal{padding:14px}.modal-head{padding:16px 20px}.modal-body{padding:18px 20px}
+  }
+  /* ---------- Motion / interactivity ---------- */
+  header{transition:box-shadow .3s ease}
+  header.scrolled{box-shadow:0 8px 30px rgba(6,81,63,.10)}
+  .nav-links a.active{color:var(--emerald);font-weight:600}
+  .btn:active{transform:translateY(-1px)}
+  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;pointer-events:none;
+    background:linear-gradient(90deg,var(--lime),var(--mint));transition:width .12s linear}
+  @media (prefers-reduced-motion: no-preference){
+    html.anim :is(.sec-head,.proof,.member,.ben,.step,.assured-card,.about-media,.about-copy,.opp-photos,.opp-right,.split>div,.req-card,.honest,.film-player,.lead-form,.cta-contacts,.foot-col,.hero-card,.hero-trust){
+      opacity:0;transform:translateY(26px);
+      transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1)}
+    html.anim :is(.sec-head,.proof,.member,.ben,.step,.assured-card,.about-media,.about-copy,.opp-photos,.opp-right,.split>div,.req-card,.honest,.film-player,.lead-form,.cta-contacts,.foot-col,.hero-card,.hero-trust).in{
+      opacity:1;transform:none}
+    .opp-a{animation:floatA 9s ease-in-out infinite}
+    .opp-b{animation:floatB 11s ease-in-out infinite}
+    .opp-c{animation:floatA 13s ease-in-out infinite reverse}
+    @keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+  }
+</style>
+<script>if('IntersectionObserver' in window)document.documentElement.classList.add('anim')</script>
+</head>
+<body data-lang="th">
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><img src="assets/logo.png" alt="HappyCare Recruitment"></a>
+    <nav class="nav-links">
+      <a href="#opportunity"><span class="th">โอกาส</span></a>
+      <a href="#about"><span class="th">เราเป็นใคร</span></a>
+      <a href="#process"><span class="th">ขั้นตอน</span></a>
+      <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
+    </nav>
+    <div class="nav-right">
+      <a href="#apply" class="nav-cta"><span class="th">ส่งใบสมัคร</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#trust"><span class="th">น่าเชื่อถืออย่างไร</span></a>
+    <a href="#about"><span class="th">เราเป็นใคร</span></a>
+    <a href="#opportunity"><span class="th">โอกาส</span></a>
+    <a href="#process"><span class="th">ขั้นตอน</span></a>
+    <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
+    <a href="#apply" class="btn btn-primary"><span class="th">ส่งใบสมัคร</span></a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-scrim"></div><div class="hero-dots"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow on-dark">
+        <span class="th">องค์กรจัดหางานสัญชาติออสเตรีย · จดทะเบียนถูกต้อง</span>
+        
+      </span>
+      <h1>
+        <span class="th">มาเป็นพยาบาลไทยรุ่นแรก<br>ที่เริ่มต้น<span class="hl">ชีวิตใหม่ในออสเตรีย</span></span>
+        
+      </h1>
+      <p class="lede">
+        <span class="th">เราดูแลคุณตั้งแต่วันแรก เรียนภาษาเยอรมันที่กรุงเทพฯ วีซ่า ที่พัก และการย้ายทั้งหมด จนถึงวันที่คุณเริ่มทำงานในโรงพยาบาลออสเตรีย โดยที่คุณ<b>ไม่ต้องจ่ายค่าดำเนินการ</b></span>
+        
+      </p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn btn-lime"><span class="th">ส่งใบสมัคร</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a href="#about" class="btn btn-ghost"><span class="th">รู้จักเราก่อน</span></a>
+      </div>
+      <div class="hero-trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span class="th">บริษัทจดทะเบียนในออสเตรีย</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="th">ไม่มีค่าใช้จ่ายในการสมัครงาน</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>
+          <span class="th">โรงเรียนสอนภาษาของเราเองที่กรุงเทพฯ</span></div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="hc-head">
+        <span class="hc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <span><span class="th">โครงการดูแลคุณครบทุกขั้นตอน</span></span>
+      </div>
+      <ul>
+        <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th">เรียนภาษาเยอรมัน <b>ฟรี</b> ที่กรุงเทพฯ เราออกค่าใช้จ่ายให้ล่วงหน้า</span></span></li>
+        <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th">ดูแล <b>วีซ่า ที่พัก และรับที่สนามบิน</b> ให้ทั้งหมด</span></span></li>
+        <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th"><b>ทุนสนับสนุน</b>ระหว่างเรียนภาษา ให้คุณตั้งใจเรียนได้เต็มที่</span></span></li>
+        <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th">ประกันสุขภาพ และทีมดูแลคุณในออสเตรีย</span></span></li>
+      </ul>
+      <div class="hc-foot"><span class="th">และคุณ<b>ไม่ต้องจ่ายค่าดำเนินการ</b>ให้กับเรา</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CREDIBILITY STRIP ============ -->
+<div class="strip">
+  <div class="wrap">
+    <span class="th"><b>Happycare Recruitment GmbH</b> · จดทะเบียนที่ Leoben ประเทศออสเตรีย</span>
+    
+    <span class="sep"></span>
+    <span class="th">สำนักงาน <b>ออสเตรีย</b> &amp; <b>กรุงเทพฯ</b></span>
+    
+    <span class="sep"></span>
+    <span class="th">ก่อตั้งโดย <b>Maximilian Wieser</b></span>
+    
+    <span class="sep"></span>
+    <span class="th">โรงพยาบาลพาร์ตเนอร์ <b>5+</b></span>
+    
+  </div>
+</div>
+
+<!-- ============ FEATURED FILM / COMMERCIAL ============ -->
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center on-dark"><span class="th">ภาพยนตร์ของเรา</span></span>
+      <h2><span class="th">ดูเรื่องราวการเริ่มต้นชีวิตใหม่ในยุโรป</span></h2>
+      <p><span class="th">ภาพยนตร์โฆษณาที่เราตั้งใจถ่ายทำจริง เพื่อบอกเล่าเส้นทางของพยาบาลไทยสู่ยุโรป</span>
+         </p>
+    </div>
+    <div class="film-player" id="filmPlayer">
+      <video src="assets/commercial.mp4" poster="assets/commercial-poster.jpg" preload="none" playsinline></video>
+      <div class="film-badge"><span class="dot"></span><span class="th">ภาพยนตร์โฆษณาอย่างเป็นทางการ</span></div>
+      <button class="film-play" aria-label="Play film"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / IS THIS LEGIT ============ -->
+<section class="trust" id="trust">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">นี่คือธุรกิจจริง</span></span>
+      <h2><span class="th">อยากรู้ก่อนว่า “โครงการนี้เชื่อถือได้จริงไหม?”</span></h2>
+      <p><span class="th">คำถามที่ถูกต้องที่สุด และนี่คือคำตอบตรง ๆ ที่ตรวจสอบได้จริงทุกข้อ</span>
+         </p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3><span class="th">บริษัทจดทะเบียนถูกต้อง</span></h3>
+        <p><span class="th">Happycare Recruitment GmbH เป็นบริษัทที่จดทะเบียนในทะเบียนการค้าออสเตรีย (Landesgericht Leoben) มีที่อยู่และหน่วยงานกำกับดูแลชัดเจน</span>
+           </p>
+      </div>
+      <div class="proof">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3><span class="th">คุณไม่ต้องจ่ายค่าดำเนินการ</span></h3>
+        <p><span class="th">เราออกค่าเรียนภาษา ที่พัก และค่าครองชีพในช่วงเตรียมตัวให้ล่วงหน้า รายได้ของเรามาจากโรงพยาบาลนายจ้าง ไม่ใช่จากพยาบาล</span>
+           </p>
+      </div>
+      <div class="proof">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3><span class="th">ถูกต้องตามกฎหมายทุกขั้นตอน</span></h3>
+        <p><span class="th">ทำงานผ่านวีซ่า Red-White-Red Card ของออสเตรีย และรับรองวุฒิพยาบาลผ่านกระบวนการ Nostrifikation อย่างเป็นทางการ</span>
+           </p>
+      </div>
+      <div class="proof">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+        <h3><span class="th">มีทีมงานจริง มีตัวตนจริง</span></h3>
+        <p><span class="th">ผู้ก่อตั้งและทีมงานของเรามีชื่อ หน้าตา และหน้าที่ชัดเจน ทั้งในออสเตรียและกรุงเทพฯ คุณจะได้พบเราด้วยตัวเอง</span>
+           </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media" id="maxVideo">
+      <video src="assets/max-thai-subtitled.mp4" poster="assets/max-thai-poster.jpg" preload="none" playsinline></video>
+      <button class="vt-play" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow"><span class="th">เราเป็นใคร</span></span>
+      <h2><span class="th">คนที่คุณจะเดินทางไปกับเขา</span></h2>
+      <p><span class="th">HappyCare ก่อตั้งโดย <b>Maximilian Wieser (Max)</b> ผู้มีความสัมพันธ์กับประเทศไทยมากว่า 20 ปี เราเป็นองค์กรจากออสเตรียที่คัดเลือกพยาบาลวุฒิปริญญาตรีจากไทย ไปทำงานในโรงพยาบาลและสถานดูแลผู้สูงอายุในออสเตรีย ที่กำลังขาดแคลนพยาบาลอย่างหนัก</span>
+         </p>
+      <ul class="about-facts">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th"><b>สำนักงานใหญ่:</b> Kaltenbrunnerstrasse 2, 8700 Leoben ประเทศออสเตรีย</span></span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th"><b>สำนักงานประจำ:</b> กรุงเทพมหานคร ประเทศไทย พร้อมโรงเรียนสอนภาษาของเราเอง</span></span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><span class="th">ดูแลครบวงจร ตั้งแต่คัดเลือก เรียนภาษา วีซ่า ไปจนถึงการใช้ชีวิตในออสเตรีย</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">ทีมงานของเรา</span></span>
+      <h2><span class="th">คนจริง ที่ดูแลคุณในทุกขั้นตอน</span></h2>
+    </div>
+    <!-- Team in Austria -->
+    <div class="team-group">
+      <div class="team-group-head"><span class="fl">🇦🇹</span><span class="th">ทีมในออสเตรีย</span></div>
+      <div class="team-grid">
+        <div class="member">
+          <div class="photo"><img src="assets/team-max.jpg" alt="Maximilian Wieser"></div>
+          <h3>Maximilian Wieser</h3>
+          <p><span class="th">ผู้ก่อตั้ง &amp; กรรมการผู้จัดการ</span></p>
+        </div>
+        <div class="member">
+          <div class="photo"><img src="assets/team-nadja.jpg" alt="Nadja Wieser"></div>
+          <h3>Nadja Wieser, BA</h3>
+          <p><span class="th">ผู้จัดการดูแลการปรับตัว</span></p>
+        </div>
+        <div class="member">
+          <div class="photo"><img src="assets/team-christine.jpg" alt="Christine Pintscher"></div>
+          <h3>Christine Pintscher, MA</h3>
+          <p><span class="th">ผู้จัดการการรับรองวุฒิ (Nostrifikation)</span></p>
+        </div>
+        <div class="member">
+          <div class="photo"><img src="assets/team-sabrina.jpg" alt="Sabrina Gingel"></div>
+          <h3>Sabrina Gingel</h3>
+          <p><span class="th">ผู้ช่วยผู้บริหาร</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team in Thailand -->
+    <div class="team-group">
+      <div class="team-group-head"><span class="fl">🇹🇭</span><span class="th">ทีมในประเทศไทย</span></div>
+      <div class="team-grid three">
+        <div class="member">
+          <div class="photo"><img src="assets/team-michaela.jpg" alt="Michaela"></div>
+          <h3>Michaela</h3>
+          <p><span class="th">ดูแลผู้สมัคร · ตอบกลับและนัดหมายสัมภาษณ์</span></p>
+        </div>
+        <div class="member">
+          <div class="photo"><img src="assets/team-belle.jpg" alt="Belle"></div>
+          <h3>Belle</h3>
+          <p><span class="th">ดูแลผู้สมัคร · ตอบกลับและนัดหมายสัมภาษณ์</span></p>
+        </div>
+        <div class="member teachers">
+          <div class="photo">
+            <div class="tc">
+              <div class="tc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+              <div class="tc-num">×3</div>
+            </div>
+          </div>
+          <h3><span class="th">ครูสอนภาษาเยอรมัน</span></h3>
+          <p><span class="th">ทีมผู้สอนมืออาชีพ 3 ท่าน</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPPORTUNITY ============ -->
+<section class="opportunity" id="opportunity">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">โอกาสของคุณ</span></span>
+      <h2><span class="th">เปลี่ยนทักษะพยาบาลไทย สู่อาชีพและชีวิตใหม่ในยุโรป</span></h2>
+    </div>
+    <div class="opp-grid">
+      <div class="opp-photos" aria-hidden="true">
+        <div class="opp-photo opp-a"><img src="assets/life-care.jpg" alt="Nursing in Austria"></div>
+        <div class="opp-photo opp-b"><img src="assets/life-ward.jpg" alt="Hospital ward"></div>
+        <div class="opp-photo opp-c"><img src="assets/life-cta.jpg" alt="New life in Austria"></div>
+        <div class="opp-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="th">ชีวิตที่ดีขึ้น เริ่มจากคุณ</span></div>
+      </div>
+      <div class="opp-right">
+        <div class="money">
+          <div class="money-row">
+            <div class="n">฿0</div>
+            <b><span class="th">ค่าเรียนและค่าดำเนินการที่คุณต้องจ่าย</span></b>
+            <small><span class="th">เราออกค่าใช้จ่ายในการเตรียมตัวให้ล่วงหน้าทั้งหมด รายได้ของเรามาจากโรงพยาบาลนายจ้าง ไม่ใช่จากคุณ</span></small>
+          </div>
+          <div class="money-row">
+            <div class="n">฿15,000<span>/เดือน</span></div>
+            <b><span class="th">ทุนสนับสนุนระหว่างเรียนภาษา</span></b>
+            <small><span class="th">หลังสอบผ่านระดับ A1 (อย่างน้อย 70%) เพื่อให้คุณตั้งใจเรียนได้เต็มที่</span></small>
+          </div>
+          <div class="money-row money-row-plain">
+            <b><span class="th">อาชีพที่เติบโตในยุโรป: NA → PFA → RN</span></b>
+            <small><span class="th">เริ่มเป็นผู้ช่วยพยาบาล (NA) แล้วก้าวสู่การเป็นพยาบาลวิชาชีพ (RN) ในออสเตรีย</span></small>
+          </div>
+          <div class="money-row money-row-plain">
+            <b><span class="th">รายได้ระดับยุโรป ตามมาตรฐานค่าจ้างของออสเตรีย</span></b>
+            <small><span class="th">เริ่มต้นโดยประมาณ €1,930 ต่อเดือน (สุทธิ) และเพิ่มขึ้นเมื่อก้าวสู่ระดับ RN<sup>*</sup></span></small>
+          </div>
+        </div>
+        <p class="money-note"><span class="th"><sup>*</sup>ตัวเลขเป็นค่าโดยประมาณ อาจแตกต่างกันตามตำแหน่งงาน คุณสมบัติ ภาษี และเงื่อนไขของนายจ้าง ไม่ถือเป็นการรับประกันรายได้</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL-SERVICE ============ -->
+<section class="fullservice">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">เราดูแลอะไรให้บ้าง</span></span>
+      <h2><span class="th">โปรแกรมครบวงจร ตั้งแต่กรุงเทพฯ ถึงออสเตรีย</span></h2>
+      <p><span class="th">คุณโฟกัสที่การเรียนและการทำงาน เรื่องที่เหลือให้เป็นหน้าที่เรา</span></p>
+    </div>
+    <div class="ben-grid">
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3><span class="th">โรงเรียนสอนภาษาเยอรมัน</span></h3>
+        <p><span class="th">เรียนแบบ Onsite ที่กรุงเทพฯ เน้นศัพท์ทางการแพทย์ กับโค้ชมืออาชีพ ถึงระดับ B1</span></p>
+      </div>
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <h3><span class="th">วีซ่าและเอกสารทั้งหมด</span></h3>
+        <p><span class="th">ดำเนินการวีซ่า Red-White-Red Card และแปล/รับรองเอกสารให้ครบถ้วน</span></p>
+      </div>
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3><span class="th">รับรองวุฒิ (Nostrifikation)</span></h3>
+        <p><span class="th">ทีมเฉพาะทางดูแลกระบวนการรับรองวุฒิพยาบาลไทยให้เป็น RN ในออสเตรีย</span></p>
+      </div>
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3><span class="th">ที่พักและการย้าย</span></h3>
+        <p><span class="th">ช่วยประสานที่พักในช่วงเริ่มต้น และมีเจ้าหน้าที่รับที่สนามบินเมื่อคุณเดินทางถึง</span></p>
+      </div>
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <h3><span class="th">ประกันสุขภาพและสวัสดิการ</span></h3>
+        <p><span class="th">เมื่อเริ่มทำงาน คุณจะเข้าสู่ระบบประกันสุขภาพของออสเตรียโดยอัตโนมัติ</span></p>
+      </div>
+      <div class="ben">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+        <h3><span class="th">ทีมดูแลต่อเนื่องในออสเตรีย</span></h3>
+        <p><span class="th">ผู้จัดการดูแลการปรับตัวช่วยเรื่องทะเบียนบ้าน บัญชีธนาคาร ชุมชน และการใช้ชีวิต</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GERMAN SCHOOL ============ -->
+<section class="school">
+  <div class="wrap split">
+    <div class="collage">
+      <div class="c c-main">
+        <video src="assets/classroom-loop.mp4" poster="assets/classroom-loop-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+        <span class="live-badge"><span class="rdot"></span><span class="th">ห้องเรียนจริงของเรา · กรุงเทพฯ</span></span>
+      </div>
+      <div class="c"><img src="assets/class-students.jpg" alt="Students learning together in Bangkok"></div>
+      <div class="c"><img src="assets/class-teacher.jpg" alt="German lesson with our coach"></div>
+    </div>
+    <div>
+      <span class="eyebrow"><span class="th">โรงเรียนภาษาของเรา</span></span>
+      <h2><span class="th">เรียนภาษาเยอรมันแบบมืออาชีพ เฉพาะสำหรับพยาบาล</span></h2>
+      <ul class="check-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="th">เชี่ยวชาญภาษาเยอรมันที่ใช้จริงในงานพยาบาลและศัพท์ทางการแพทย์</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="th">เรียนกับโค้ชสอนภาษาระดับมืออาชีพ แบบ Onsite ที่กรุงเทพฯ</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="th">สอบกับสถาบันเกอเธ่ (Goethe-Institut) ที่ได้รับการยอมรับระดับสากล</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="th">ระยะเวลาเรียนจาก A1 ถึง B1 ประมาณ 8–10 เดือน</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center on-dark"><span class="th">ขั้นตอน</span></span>
+      <h2><span class="th">เส้นทางที่ชัดเจน จากประเทศไทย สู่ชีวิตใหม่ในออสเตรีย</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3><span class="th">สมัครและทำความรู้จัก</span></h3>
+        <p><span class="th">ส่งใบสมัครและเอกสาร เข้าสัมภาษณ์ และรับคำแนะนำในขั้นตอนถัดไป</span></p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3><span class="th">เรียนภาษา &amp; เตรียมตัว</span></h3>
+        <p><span class="th">เรียนภาษาเยอรมันและวัฒนธรรมที่กรุงเทพฯ พร้อมเงินสนับสนุน ฿15,000/เดือน หลังผ่าน A1</span></p>
+        <span class="when"><span class="th">≈ 8–10 เดือน</span></span>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3><span class="th">สัมภาษณ์งาน &amp; วีซ่า</span></h3>
+        <p><span class="th">สัมภาษณ์กับโรงพยาบาลพาร์ตเนอร์ แล้วเราดำเนินการวีซ่าให้จนเสร็จ</span></p>
+        <span class="when"><span class="th">วีซ่า ≈ 8–12 สัปดาห์</span></span>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3><span class="th">เริ่มงานและเติบโต</span></h3>
+        <p><span class="th">เริ่มทำงานเป็น NA → เตรียมสอบ B2 → รับรองวุฒิ → ก้าวสู่ RN (DGKP)</span></p>
+        <span class="when"><span class="th">RN ≈ 6–18 เดือน</span></span>
+      </div>
+    </div>
+    <p class="process-foot">
+      <span class="th">เราเดินไปกับคุณในทุกก้าว และคุณ<b>ไม่ต้องจ่ายค่าดำเนินการ</b>ให้กับเรา</span>
+      
+    </p>
+  </div>
+</section>
+
+<!-- ============ REQUIREMENTS ============ -->
+<section class="requirements">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">คุณสมบัติและความจริงที่ควรรู้</span></span>
+      <h2><span class="th">คุณสมัครได้ไหม? และมีเงื่อนไขอะไรบ้าง</span></h2>
+      <p><span class="th">เราบอกทุกอย่างตรงไปตรงมาตั้งแต่ต้น เพราะความไว้ใจสำคัญกว่าการปิดการขาย</span></p>
+    </div>
+    <div class="eligibility">
+      <span class="elig-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="th">รับเฉพาะพยาบาลวิชาชีพ</span></span>
+      <h3><span class="th">โครงการนี้เปิดรับ<b>เฉพาะพยาบาลวิชาชีพที่สำเร็จการศึกษาระดับปริญญาตรี พยาบาลศาสตรบัณฑิต (4 ปี)</b> และมีใบอนุญาตประกอบวิชาชีพการพยาบาล (RN License) ที่ยังไม่หมดอายุเท่านั้น</span></h3>
+      <div class="elig-not">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+        <span><span class="th"><b>เราไม่สามารถรับ</b> ผู้ช่วยพยาบาล (PN), ผู้ช่วยเหลือคนไข้, ผู้ดูแลผู้สูงอายุ หรือบุคลากรสายสุขภาพอื่น ๆ ที่ไม่มีวุฒิปริญญาตรีพยาบาลศาสตร์ได้</span></span>
+      </div>
+    </div>
+    <div class="req-grid">
+      <div class="req-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="th">คุณสมบัติผู้สมัคร</span></h3>
+        <ul class="req-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th"><b>วุฒิปริญญาตรี พยาบาลศาสตรบัณฑิต (4 ปี)</b> และใบอนุญาตประกอบวิชาชีพ (RN License) ที่ยังไม่หมดอายุ</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">อายุไม่เกิน 40 ปี</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">ไม่จำเป็นต้องพูดภาษาอังกฤษได้คล่อง (แนะนำระดับ A2 ขึ้นไป), ภาษาเยอรมันเรียนกับเรา</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">เอกสาร: พาสปอร์ต, วุฒิพยาบาล, ใบ RN, Transcript, ทะเบียนบ้าน, บัตรประชาชน, รูปถ่าย, CV</span></li>
+        </ul>
+      </div>
+      <div class="req-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span class="th">เส้นทางอาชีพ NA → RN</span></h3>
+        <p class="req-sub"><span class="th">นี่คือเส้นทางเติบโตของคุณ <b>หลังจากมาถึงออสเตรียแล้ว</b> ไม่ใช่คุณสมบัติในการสมัคร</span></p>
+        <ul class="req-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">เริ่มทำงานเป็น Nursing Assistant (NA) หลังสอบผ่าน B1</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">เตรียมสอบ B2 ควบคู่กับการทำงาน แล้วเข้าสู่กระบวนการรับรองวุฒิ</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">ก้าวสู่ PFA และ RN (DGKP), พร้อมรายได้ที่สูงขึ้น</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="th">หลังครบสัญญา สามารถทำงานต่อและพาครอบครัวมาได้ตามเงื่อนไข</span></li>
+        </ul>
+      </div>
+      <div class="honest">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="th">ความจริงที่เราบอกคุณตรง ๆ</span></h4>
+        <p><span class="th">โครงการนี้เป็นการลงทุนระยะยาวของทั้งสองฝ่าย: คุณต้องทำงานในออสเตรียอย่างน้อย <b>2 ปี</b> ในตำแหน่ง NA และหากออกก่อนครบสัญญา คุณอาจต้องรับผิดชอบค่าใช้จ่ายที่เราออกให้ล่วงหน้าจริง (เช่น ค่าเรียน ค่าตั๋วเครื่องบิน ค่าวีซ่า ค่าแปลเอกสาร) โดยเงื่อนไขทั้งหมดจะระบุไว้ในสัญญาอย่างชัดเจนก่อนที่คุณจะตัดสินใจ</span>
+           </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PEACE OF MIND ============ -->
+<section class="assured">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">อุ่นใจได้ตั้งแต่วันแรก</span></span>
+      <h2><span class="th">คุณไม่ได้เดินทางคนเดียว และอยู่ในการดูแลที่ปลอดภัย</span></h2>
+      <p><span class="th">ความปลอดภัยและความสบายใจของคุณมาเป็นอันดับแรก ตั้งแต่ก่อนออกเดินทางจนถึงการเริ่มต้นชีวิตใหม่</span>
+         </p>
+    </div>
+    <div class="assured-grid">
+      <div class="assured-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+        <h3><span class="th">ไปเป็นกลุ่มเสมอ อย่างน้อย 3 คน</span></h3>
+        <p><span class="th">พยาบาลไทยจะเดินทางและเริ่มต้นชีวิตใหม่ในออสเตรียพร้อมกันเป็นกลุ่ม อย่างน้อย 3 คน คุณจึงมีเพื่อนร่วมเส้นทางที่เข้าใจกัน คอยช่วยเหลือและให้กำลังใจกันตั้งแต่วันแรก ไม่ต้องเผชิญสิ่งใดเพียงลำพัง</span>
+           </p>
+      </div>
+      <div class="assured-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3><span class="th">ถูกกฎหมาย โปร่งใส และปลอดภัย</span></h3>
+        <p><span class="th">คุณเก็บพาสปอร์ตและเอกสารสำคัญไว้กับตัวเองเสมอ มีสัญญาที่ชัดเจน ไม่มีค่าใช้จ่ายแอบแฝง และทุกขั้นตอนเป็นไปตามกฎหมายวีซ่าและแรงงานของออสเตรีย เรายึดหลักการจัดหางานอย่างมีจริยธรรม และต่อต้านการเอาเปรียบและการค้ามนุษย์ทุกรูปแบบ</span>
+           </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow center"><span class="th">คำถามที่พบบ่อย</span></span>
+      <h2><span class="th">ทุกคำถามที่คุณอยากรู้ก่อนตัดสินใจ</span></h2>
+      <p><span class="th">รวบรวมจากคำถามที่ผู้สมัครถามเราบ่อยที่สุด ตอบตรง ทุกข้อ</span></p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-tabs" id="faqTabs"></div>
+      <div class="faq-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="faqSearch" placeholder="ค้นหาคำถาม เช่น วีซ่า, ที่พัก, ครอบครัว…" data-th="ค้นหาคำถาม เช่น วีซ่า, ที่พัก, ครอบครัว…">
+      </div>
+      <div id="faqContainer"></div>
+      <p class="faq-empty" id="faqEmpty" hidden><span class="th">ไม่พบคำถามที่ตรงกับคำค้นหา</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA + APPLY ============ -->
+<section class="cta" id="apply">
+  <div class="wrap cta-grid">
+    <div>
+      <span class="eyebrow on-dark"><span class="th">พร้อมเริ่มต้นแล้วหรือยัง</span></span>
+      <h2><span class="th">ก้าวแรกสู่<span class="hl">ชีวิตใหม่</span> เริ่มที่นี่</span></h2>
+      <p><span class="th">กรอกข้อมูลสั้น ๆ แล้วทีมของเราจะติดต่อกลับเพื่อพูดคุยและตอบทุกคำถาม โดยไม่มีข้อผูกมัด รับจำนวนจำกัดต่อรุ่น</span>
+         </p>
+      <div class="cta-contacts">
+        <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></span><span class="th">เพิ่มเพื่อนใน LINE เพื่อคุยกับเราได้เลย</span></a>
+        <a href="mailto:support@happycare-recruitment.at"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>support@happycare-recruitment.at</a>
+        <a href="https://www.instagram.com/HappyCare_TH" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span>@HappyCare_TH</a>
+      </div>
+    </div>
+    <div class="cta-form-wrap">
+      <form class="lead-form" id="leadForm" novalidate>
+        <h3><span class="th">ส่งใบสมัคร / สอบถาม</span></h3>
+        <p class="lf-sub"><span class="th">ใช้เวลาไม่ถึง 1 นาที เราจะติดต่อกลับโดยเร็วที่สุด</span></p>
+        <input type="hidden" name="access_key" value="1cb11c2c-7d15-42a0-be6b-26c4143f6196">
+        <input type="hidden" name="subject" value="HappyCare Thailand – ใบสมัคร/สอบถามพยาบาล">
+        <input type="hidden" name="from_name" value="HappyCare Thailand Website">
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label><span class="th">ชื่อ-นามสกุล</span> <span class="req">*</span></label>
+          <input type="text" name="ชื่อ" required data-th="ชื่อ-นามสกุลของคุณ" placeholder="ชื่อ-นามสกุลของคุณ">
+        </div>
+        <div class="fld-row">
+          <div class="field">
+            <label><span class="th">เบอร์โทร / LINE ID</span> <span class="req">*</span></label>
+            <input type="text" name="โทร_LINE" required data-th="เบอร์โทรหรือ LINE ID" placeholder="เบอร์โทรหรือ LINE ID">
+          </div>
+          <div class="field">
+            <label><span class="th">อีเมล</span> <span class="req">*</span></label>
+            <input type="email" name="อีเมล" required data-th="อีเมลของคุณ" placeholder="อีเมลของคุณ">
+          </div>
+        </div>
+        <div class="field">
+          <label><span class="th">คุณสมบัติของคุณ</span></label>
+          <select name="คุณสมบัติ">
+            <option value="" data-th="เลือก…">เลือก…</option>
+            <option data-th="มีวุฒิปริญญาตรีพยาบาล (4 ปี) + ใบ RN">มีวุฒิปริญญาตรีพยาบาล (4 ปี) + ใบ RN</option>
+            <option data-th="กำลังศึกษา ปริญญาตรีพยาบาล (ปีสุดท้าย)">กำลังศึกษา ปริญญาตรีพยาบาล (ปีสุดท้าย)</option>
+            <option data-th="อื่น ๆ / ขอสอบถามเพิ่มเติม">อื่น ๆ / ขอสอบถามเพิ่มเติม</option>
+          </select>
+          <p class="field-hint"><span class="th">โครงการรับเฉพาะพยาบาลวิชาชีพที่จบปริญญาตรีพยาบาลศาสตร์เท่านั้น</span></p>
+        </div>
+        <div class="field">
+          <label><span class="th">ข้อความ (ถ้ามี)</span></label>
+          <textarea name="ข้อความ" data-th="มีอะไรอยากถามเราไหม?" placeholder="มีอะไรอยากถามเราไหม?"></textarea>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="lf-consent" name="ความยินยอม" value="ยินยอม" required>
+          <label for="lf-consent"><span class="th">ฉันยินยอมให้ HappyCare ใช้ข้อมูลนี้เพื่อติดต่อกลับ รายละเอียดใน<button type="button" class="link-btn" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button></span></label>
+        </div>
+        <div class="lf-error" id="lfError"></div>
+        <button type="submit" class="btn btn-primary" id="lfSubmit"><span class="lf-btn-label"><span class="th">ส่งใบสมัคร</span></span></button>
+        <p class="lf-fineprint"><span class="th">ข้อมูลของคุณถูกส่งอย่างปลอดภัยถึงทีมงานของเราเท่านั้น</span></p>
+      </form>
+      <div class="form-success" id="leadSuccess" hidden>
+        <div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3><span class="th">ขอบคุณค่ะ! 🌿</span></h3>
+        <p><span class="th">เราได้รับข้อมูลของคุณแล้ว ทีมงานจะติดต่อกลับโดยเร็วที่สุด</span></p>
+        <div class="fs-line">
+          <p class="fs-line-label"><span class="th">ขั้นตอนต่อไป: เพิ่มเพื่อนใน LINE เพื่อให้เราติดต่อกลับได้เร็วขึ้น</span></p>
+          <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" class="line-btn-official" aria-label="เพิ่มเพื่อนใน LINE">
+            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อนใน LINE" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo-white.png" alt="HappyCare Recruitment" class="foot-logo">
+        <p><span class="th">องค์กรจัดหางานสัญชาติออสเตรีย ที่นำพยาบาลไทยวุฒิปริญญาตรี สู่อาชีพและชีวิตใหม่ในออสเตรีย อย่างถูกต้องและมีการดูแลครบวงจร</span>
+           </p>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/HappyCare_TH" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61575949214978" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+          <a href="mailto:support@happycare-recruitment.at" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4><span class="th">เมนู</span></h4>
+        <a href="#trust"><span class="th">ธุรกิจของเราน่าเชื่อถือ</span></a>
+        <a href="#about"><span class="th">เราเป็นใคร</span></a>
+        <a href="#opportunity"><span class="th">โอกาสและรายได้</span></a>
+        <a href="#process"><span class="th">ขั้นตอน</span></a>
+        <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
+        <a href="#apply"><span class="th">ส่งใบสมัคร</span></a>
+      </div>
+      <div class="foot-col">
+        <h4><span class="th">ติดต่อเรา</span></h4>
+        <address>Happycare Recruitment GmbH<br>Kaltenbrunnerstrasse 2<br>8700 Leoben, <span class="th">ออสเตรีย</span><br><span class="th">&amp; สำนักงานกรุงเทพฯ</span></address>
+        <a href="mailto:support@happycare-recruitment.at">support@happycare-recruitment.at</a>
+        <a href="tel:+436766455276">+43 676 64 55 276</a>
+      </div>
+    </div>
+    <div class="foot-line">
+      <div class="foot-line-text">
+        <span class="fl-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>LINE</span>
+        <h4><span class="th">คุยกับเราทาง LINE ได้เลย</span></h4>
+        <p><span class="th">สแกน QR โค้ด หรือกดปุ่มด้านล่าง เพื่อเพิ่มเราเป็นเพื่อนและเริ่มพูดคุยได้ทันที</span></p>
+        <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" class="line-add-btn" aria-label="เพิ่มเพื่อนใน LINE"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อนใน LINE" loading="lazy"></a>
+      </div>
+      <div class="foot-line-qr">
+        <img src="assets/line-qr.png" alt="LINE QR — HappyCare Thailand" width="180" height="180">
+        <span class="th">สแกนเพื่อเพิ่มเพื่อน</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Happycare Recruitment GmbH · <span class="th">สงวนลิขสิทธิ์</span></span>
+      <div class="foot-legal">
+        <button type="button" data-modal-open="impressum">Impressum</button>
+        <button type="button" data-modal-open="privacy"><span class="th">นโยบายความเป็นส่วนตัว</span></button>
+        <button type="button" data-cookie-manage><span class="th">จัดการคุกกี้</span></button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ COOKIE BANNER ============ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="คุกกี้">
+  <h4>ความเป็นส่วนตัว &amp; คุกกี้</h4>
+  <p>เราใช้คุกกี้เพื่อการแสดงผล (ฟอนต์จาก Google Fonts) และเพื่อวัดผลโฆษณาผ่าน Meta Pixel (Facebook) เครื่องมือเหล่านี้จะทำงานก็ต่อเมื่อคุณกด &ldquo;ยอมรับ&rdquo; เท่านั้น หากปฏิเสธ เราจะไม่โหลดเครื่องมือติดตามใด ๆ อ่านรายละเอียดใน<button class="link-btn" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button></p>
+  <div class="cookie-actions">
+    <button class="btn-ck btn-ck-accept" id="ckAccept" type="button">ยอมรับ</button>
+    <button class="btn-ck btn-ck-reject" id="ckReject" type="button">ปฏิเสธ</button>
+  </div>
+</div>
+
+<!-- ============ MODALS ============ -->
+<div class="modal" id="modal-impressum" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h3>Impressum</h3><button class="modal-close" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-body">
+      <h4><span class="th">ผู้ให้บริการเว็บไซต์</span></h4>
+      <address><strong>Happycare Recruitment GmbH</strong><br>Kaltenbrunnerstrasse 2<br>8700 Leoben, <span class="th">ประเทศออสเตรีย</span></address>
+      <p><span class="th">อีเมล:</span> <a href="mailto:support@happycare-recruitment.at">support@happycare-recruitment.at</a><br>
+         <span class="th">โทร:</span> <a href="tel:+436766455276">+43 676 64 55 276</a></p>
+      <h4><span class="th">การจดทะเบียน</span></h4>
+      <p><span class="th">รูปแบบบริษัท:</span> <strong>Gesellschaft mit beschränkter Haftung (GmbH)</strong><br>
+         <span class="th">เลขทะเบียนนิติบุคคล (Firmenbuchnummer):</span> <strong>FN 628590 y</strong><br>
+         <span class="th">ศาลทะเบียนการค้า (Firmenbuchgericht):</span> <strong>Landesgericht Leoben</strong><br>
+         <span class="th">เลขประจำตัวผู้เสียภาษี (UID-Nummer):</span> <strong>ATU80938835</strong><br>
+         <span class="th">ประเภทกิจการ (Unternehmensgegenstand):</span> <strong>Personalvermittlung</strong><br>
+         <span class="th">หน่วยงานกำกับดูแล:</span> <strong>Bezirkshauptmannschaft Leoben</strong><br>
+         <span class="th">กรรมการผู้จัดการ:</span> <strong>Maximilian Wieser</strong></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-privacy" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h3><span class="th">นโยบายความเป็นส่วนตัว</span></h3><button class="modal-close" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-body">
+      <h4><span class="th">ผู้ควบคุมข้อมูล</span></h4>
+      <address><strong>Happycare Recruitment GmbH</strong><br>Kaltenbrunnerstrasse 2, 8700 Leoben, <span class="th">ออสเตรีย</span><br><a href="mailto:support@happycare-recruitment.at">support@happycare-recruitment.at</a></address>
+      <h4><span class="th">แบบฟอร์มติดต่อ</span></h4>
+      <p><span class="th">ข้อมูลที่คุณกรอกในแบบฟอร์ม (ชื่อ, เบอร์โทร/LINE, อีเมล และข้อความ) จะถูกส่งอย่างปลอดภัยผ่านผู้ให้บริการ Web3Forms ไปยังกล่องอีเมลของเรา เพื่อใช้ในการติดต่อกลับและดำเนินการสมัครเท่านั้น เราจะไม่นำไปขายหรือเผยแพร่ต่อบุคคลภายนอก</span>
+         </p>
+      <h4><span class="th">Google Fonts</span></h4>
+      <p><span class="th">เมื่อคุณให้ความยินยอม เราจะโหลดฟอนต์จาก Google Fonts (Google Ireland Limited) ซึ่งอาจมีการส่ง IP ของคุณไปยัง Google คุณสามารถปฏิเสธได้ที่แถบคุกกี้</span>
+         </p>
+      <h4>Meta Pixel (Facebook)</h4>
+      <p>เมื่อคุณให้ความยินยอม เราใช้ Meta Pixel ของ Meta Platforms Ireland Limited เพื่อวัดผลและปรับปรุงประสิทธิภาพโฆษณาของเราบน Facebook และ Instagram เครื่องมือนี้อาจตั้งคุกกี้และส่งข้อมูลการใช้งาน (เช่น หมายเลข IP และหน้าที่คุณเข้าชม) ไปยัง Meta ซึ่งอาจมีการประมวลผลนอกสหภาพยุโรป รวมถึงสหรัฐอเมริกา ภายใต้ Standard Contractual Clauses ของสหภาพยุโรป ฐานทางกฎหมายคือความยินยอมของคุณ (มาตรา 6(1)(a) GDPR) คุณสามารถปฏิเสธหรือถอนความยินยอมได้ทุกเมื่อผ่านปุ่ม &ldquo;จัดการคุกกี้&rdquo; ด้านล่าง โดยไม่กระทบต่อการใช้งานเว็บไซต์</p>
+      <h4><span class="th">สิทธิของคุณ</span></h4>
+      <p><span class="th">คุณมีสิทธิเข้าถึง แก้ไข ลบ และคัดค้านการใช้ข้อมูลของคุณได้ตาม GDPR โดยติดต่อเราทางอีเมลด้านบน หน่วยงานกำกับดูแล: Österreichische Datenschutzbehörde, Wien (dsb.gv.at)</span>
+         </p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- Mobile nav (hamburger) ---------- */
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('mobileNav');
+  if(!t || !m) return;
+  function close(){ t.classList.remove('open'); m.classList.remove('open'); t.setAttribute('aria-expanded','false'); }
+  t.addEventListener('click', function(){
+    var open = t.classList.toggle('open');
+    m.classList.toggle('open', open);
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+
+/* ---------- FAQ data (bilingual) ---------- */
+var FAQ = [
+  {g:{th:'คุณสมบัติผู้สมัคร',en:'Application requirements'}, tab:{th:'คุณสมบัติ',en:'Requirements'}, items:[
+    {q:{th:'อายุผู้สมัครต้องไม่เกินเท่าไหร่?',en:'What is the maximum age for applicants?'},a:{th:'ผู้สมัครต้องมีอายุไม่เกิน 40 ปี',en:'Applicants must be no older than 40 years old.'}},
+    {q:{th:'หากไม่มีวุฒิปริญญาตรีพยาบาล สมัครได้ไหม?',en:'Can I apply without a Bachelor’s degree in Nursing?'},a:{th:'ไม่ได้ โครงการรับเฉพาะผู้ที่มีวุฒิปริญญาตรีพยาบาลและใบอนุญาตประกอบวิชาชีพ (RN License)',en:'No. Applicants must hold a Bachelor’s degree in Nursing and a valid RN license.'}},
+    {q:{th:'เป็นผู้ช่วยพยาบาล (PN) หรือผู้ดูแลผู้สูงอายุ สมัครได้ไหม?',en:'I’m a nurse assistant / practical nurse (PN) or a caregiver — can I apply?'},a:{th:'ขออภัย โครงการนี้รับเฉพาะพยาบาลวิชาชีพที่จบปริญญาตรี พยาบาลศาสตรบัณฑิต (4 ปี) และมีใบ RN เท่านั้น เราไม่สามารถรับผู้ช่วยพยาบาล ผู้ช่วยเหลือคนไข้ หรือผู้ดูแลได้ (ในออสเตรียคุณจะ "เริ่ม" ทำงานในตำแหน่ง NA แต่การจะเข้าร่วมได้ต้องมีวุฒิปริญญาตรีพยาบาลก่อน)',en:'We’re sorry, but no. This program is only for registered nurses with a 4-year Bachelor of Nursing degree and an RN license. We cannot accept nurse assistants, care aides, or caregivers. (In Austria you *start* working as an NA, but a Bachelor of Nursing is required to join in the first place.)'}},
+    {q:{th:'หากมีประสบการณ์ทำงานน้อย สมัครได้ไหม?',en:'Can I apply with limited nursing experience?'},a:{th:'สมัครได้ ขอเพียงมีวุฒิปริญญาตรีพยาบาลและใบ RN ตามเงื่อนไข ประสบการณ์อาจเป็นปัจจัยประกอบในการพิจารณาคัดเลือก',en:'Yes. You need a Bachelor’s degree and a valid RN license; work experience may be considered as part of selection.'}},
+    {q:{th:'ใบอนุญาตประกอบวิชาชีพ (RN License) ต้องยังไม่หมดอายุใช่ไหม?',en:'Does my RN license need to be valid?'},a:{th:'ใช่ ผู้สมัครต้องมีใบอนุญาตที่ถูกต้องและใช้งานได้ตามข้อกำหนดของโครงการ',en:'Yes. You must hold a valid RN license that meets the program requirements.'}},
+    {q:{th:'เอกสารที่ต้องยื่นมีอะไรบ้าง?',en:'What documents are required to apply?'},a:{th:'Passport, วุฒิปริญญาตรีพยาบาล, ใบ RN, Transcript, ทะเบียนบ้าน, บัตรประชาชน, รูปถ่าย และ CV',en:'Passport, nursing degree certificate, RN license, transcript, house registration, national ID, photos, and CV.'}},
+    {q:{th:'หากพูดภาษาอังกฤษไม่ได้ สมัครได้ไหม?',en:'Can I apply if I can’t speak English?'},a:{th:'สมัครได้ แต่แนะนำให้มีพื้นฐานภาษาอังกฤษระดับ A2 ขึ้นไป เพื่อช่วยในการเรียนและการใช้ชีวิต',en:'Yes, but English at around A2 level is recommended to support learning and daily life.'}},
+    {q:{th:'ขั้นตอนการเข้าร่วมโครงการมีอะไรบ้าง?',en:'What are the steps to join?'},a:{th:'สมัคร → ส่งเอกสาร → สัมภาษณ์ → เรียนภาษาเยอรมัน → สอบตามระดับ → สัมภาษณ์กับโรงพยาบาลพาร์ตเนอร์ → ดำเนินการวีซ่า → เดินทางไปออสเตรีย',en:'Apply → submit documents → interview → German training → language exams → partner-hospital interview → visa → travel to Austria.'}},
+    {q:{th:'เรียนภาษาเยอรมันเองแล้วนำผล B1 มายื่นได้ไหม?',en:'Can I study German myself and submit a B1 certificate?'},a:{th:'ได้ หากเป็นผลสอบจากสถาบันที่ได้รับการยอมรับ',en:'Yes, if the certificate is from a recognized institution.'}},
+    {q:{th:'เรียนออนไลน์ได้ไหม?',en:'Can I study online?'},a:{th:'หลักสูตร A1 เรียนแบบ Onsite ที่กรุงเทพฯ 100% ส่วนคลาสทบทวนอาจมีออนไลน์บางครั้งในวันหยุด',en:'The A1 course is 100% onsite in Bangkok. Some review sessions may occasionally be online on weekends.'}},
+    {q:{th:'ทำงานระหว่างเรียนได้ไหม?',en:'Can I work while studying?'},a:{th:'ไม่แนะนำ เพราะผู้สมัครต้องโฟกัสกับการเรียนภาษาและการสอบตามกำหนดของโครงการ',en:'Not recommended, you need to focus on German training and passing exams on schedule.'}}
+  ]},
+  {g:{th:'ภาษา · การสอบ · เงินสนับสนุน',en:'Language · Exams · Financial support'}, tab:{th:'ภาษา & การสอบ',en:'Language & exams'}, items:[
+    {q:{th:'สอบภาษาเยอรมันกับสถาบันใด?',en:'Where is the German exam taken?'},a:{th:'สอบกับสถาบันเกอเธ่ (Goethe-Institut) ซึ่งได้รับการยอมรับระดับสากล',en:'At the Goethe-Institut, an internationally recognized examination provider.'}},
+    {q:{th:'หากสอบ A1 ไม่ผ่าน สอบใหม่ได้ไหม?',en:'If I fail A1, can I retake it?'},a:{th:'ไม่สามารถสอบ A1 ใหม่ได้ ผู้สมัครควรเตรียมตัวและตั้งใจเรียนเพื่อให้ผ่านตามเกณฑ์',en:'No, A1 cannot be retaken. Prepare well and study seriously to meet the passing criteria.'}},
+    {q:{th:'ต้องผ่าน A1 ก่อนจึงได้เงินสนับสนุน ฿15,000/เดือนใช่ไหม?',en:'Do I need to pass A1 before the ฿15,000/month support?'},a:{th:'ใช่ ต้องสอบผ่าน A1 ด้วยคะแนนอย่างน้อย 70% จึงจะได้รับเงินสนับสนุน 15,000 บาทต่อเดือน',en:'Yes. You must pass A1 with at least 70% to receive the ฿15,000/month support.'}},
+    {q:{th:'เรียนจาก A1 ถึง B1 ใช้เวลานานเท่าไหร่?',en:'How long from A1 to B1?'},a:{th:'ประมาณ 8–10 เดือน ขึ้นอยู่กับแผนการเรียนและผลการสอบของแต่ละคน',en:'Approximately 8–10 months, depending on the study plan and individual results.'}},
+    {q:{th:'หลังผ่าน B1 ต้องทำงานที่ออสเตรียอย่างน้อย 2 ปีใช่ไหม?',en:'Is a 2-year commitment required after B1?'},a:{th:'ใช่ ต้องทำงานในตำแหน่ง Nursing Assistant (NA) อย่างน้อย 2 ปีตามเงื่อนไข',en:'Yes. You work as a Nursing Assistant (NA) for at least 2 years.'}},
+    {q:{th:'หลังผ่าน B1 จะได้ทำงานเป็น NA ก่อนใช่ไหม?',en:'Will I work as an NA first after B1?'},a:{th:'ใช่ เริ่มทำงานเป็น NA ก่อน แล้วดำเนินการเข้าสู่กระบวนการรับรองวิชาชีพ (RN)',en:'Yes. You start as an NA, then proceed toward RN recognition.'}},
+    {q:{th:'หากสอบ B1 หรือ B2 ไม่ผ่าน สอบใหม่ได้ไหม ใครจ่ายค่าสอบ?',en:'Can I retake B1/B2, and who pays?'},a:{th:'สอบใหม่ได้ โดยปกติผู้สมัครเป็นผู้รับผิดชอบค่าสอบใหม่',en:'Yes, you may retake them; the applicant is usually responsible for the retake fee.'}},
+    {q:{th:'หากเรียนไม่ทันหรือสอบไม่ผ่านตามกำหนด จะเป็นอย่างไร?',en:'What if I can’t finish or pass on schedule?'},a:{th:'ควรปฏิบัติตามแผนการเรียน หากไม่ผ่านตามเวลาที่กำหนด อาจกระทบกำหนดการและขั้นตอนถัดไป ขึ้นอยู่กับการพิจารณาของโครงการ',en:'Follow the study plan; missing the timeline may affect your schedule and next steps, subject to program consideration.'}},
+    {q:{th:'ระหว่างทำงานเป็น NA เตรียมสอบ B2 ได้ไหม?',en:'Can I prepare for B2 while working as an NA?'},a:{th:'ได้ สามารถเตรียมสอบ B2 ควบคู่การทำงาน โดยบริหารเวลาให้เหมาะกับตารางงานและข้อกำหนดของโรงพยาบาล',en:'Yes, alongside work, managing your time around the hospital schedule.'}},
+    {q:{th:'หากสอบผ่าน B2 ที่ไทย จะเป็น RN ได้ทันทีไหม?',en:'If I pass B2 in Thailand, am I an RN immediately?'},a:{th:'ยังไม่ได้ ต้องผ่านขั้นตอนการรับรองวิชาชีพในออสเตรียก่อน',en:'Not immediately, you must complete the professional recognition process in Austria first.'}},
+    {q:{th:'หลังผ่าน B2 ใช้เวลานานเท่าไหร่จึงเป็น RN?',en:'How long to become an RN after B2?'},a:{th:'ประมาณ 6–18 เดือน ขึ้นอยู่กับกระบวนการรับรองวุฒิและการตรวจเอกสาร',en:'Around 6–18 months, depending on the recognition process and document review.'}}
+  ]},
+  {g:{th:'เอกสาร · วีซ่า · ค่าใช้จ่าย · สัญญา',en:'Documents · Visa · Costs · Contract'}, tab:{th:'วีซ่า & เอกสาร',en:'Visa & documents'}, items:[
+    {q:{th:'ดำเนินการวีซ่าใช้เวลานานเท่าไหร่?',en:'How long does the visa process take?'},a:{th:'ประมาณ 8–12 สัปดาห์ หลังยื่นเอกสารครบถ้วน',en:'Approximately 8–12 weeks after all documents are complete.'}},
+    {q:{th:'เอกสารสำหรับยื่นวีซ่ามีอะไรบ้าง?',en:'What documents are needed for the visa?'},a:{th:'Passport, วุฒิพยาบาล, ใบ RN, Transcript, ทะเบียนบ้าน, บัตรประชาชน, รูปถ่าย, CV และเอกสารอื่นตามที่หน่วยงานกำหนด',en:'Passport, nursing degree, RN license, transcript, house registration, ID, photos, CV, and any others the authorities require.'}},
+    {q:{th:'ถ้าลาออกจากงานแล้ว แต่วีซ่าไม่ผ่าน โครงการช่วยไหม?',en:'If I resign but the visa is rejected, is there support?'},a:{th:'ทางโครงการดูแลและเตรียมความพร้อมตลอดกระบวนการ ผู้ที่เรียนและสอบผ่านตามแผนจะดำเนินการขอวีซ่าได้ ทั้งนี้การอนุมัติวีซ่าขึ้นอยู่กับหน่วยงานภาครัฐออสเตรีย',en:'We guide you throughout; those who complete the training and exams can proceed to the visa. Approval, however, rests with the Austrian authorities.'}},
+    {q:{th:'จะได้รับวีซ่าประเภทใด?',en:'What type of visa will I get?'},a:{th:'วีซ่าพำนักเพื่อทำงาน/ฝึกงานด้านสุขภาพ ตามที่ทางการออสเตรียอนุมัติ (โดยทั่วไปคือ Red-White-Red Card)',en:'A residence visa for healthcare employment/training as approved by Austrian immigration (typically the Red-White-Red Card).'}},
+    {q:{th:'หากอยู่ไม่ครบสัญญา ค่าปรับเท่าไหร่?',en:'What’s the penalty for leaving early?'},a:{th:'อาจต้องรับผิดชอบค่าใช้จ่ายที่โครงการจ่ายไปจริง เช่น ค่าเรียน ค่าตั๋วเครื่องบิน ค่าวีซ่า ค่าแปลเอกสาร โดยเงื่อนไขระบุไว้ในสัญญา กรุณาอ่านให้ละเอียดก่อนเข้าร่วม',en:'You may need to reimburse actual costs paid by the program (course, flights, visa, translation). The exact terms are stated in the contract, please review carefully before joining.'}},
+    {q:{th:'ค่าใช้จ่ายที่ต้องจ่ายเองมีอะไรบ้าง?',en:'What do I pay myself?'},a:{th:'ค่าพาสปอร์ต ค่าตรวจสุขภาพ ค่ารับรองเอกสาร และค่าใช้จ่ายส่วนตัวที่ไม่อยู่ในเงื่อนไขสนับสนุน',en:'Passport, medical check-up, document certification, and personal costs not covered by the program.'}},
+    {q:{th:'ก่อนเดินทางควรเตรียมเงินเท่าไหร่?',en:'How much should I prepare before travel?'},a:{th:'ควรเตรียมเงินสำหรับค่าใช้จ่ายช่วงเริ่มต้น เช่น ค่ามัดจำที่พัก ค่าใช้จ่ายรายวัน ค่าเดินทาง ขึ้นอยู่กับรูปแบบการใช้ชีวิต',en:'Enough for initial costs, housing deposit, daily expenses, transport, depending on your lifestyle.'}},
+    {q:{th:'ค่ามัดจำหอพักที่ออสเตรียประมาณเท่าไหร่?',en:'How much is the accommodation deposit?'},a:{th:'โดยทั่วไปประมาณ 1–2 เดือนของค่าเช่า',en:'Usually around 1–2 months’ rent.'}},
+    {q:{th:'สัญญาจ้างงานกับโรงพยาบาลกี่ปี?',en:'How long is the hospital contract?'},a:{th:'ขั้นต่ำ 2 ปีหลังเริ่มทำงานในตำแหน่ง NA รายละเอียดขึ้นอยู่กับโรงพยาบาลและสัญญาที่ได้รับ',en:'A minimum of 2 years after starting as an NA; details depend on the hospital and your contract.'}},
+    {q:{th:'เปลี่ยนนายจ้างหรือโรงพยาบาลได้ไหม?',en:'Can I change employer or hospital?'},a:{th:'หลังผ่าน B2 และการรับรองวิชาชีพ สามารถเลือกได้ ขึ้นอยู่กับตำแหน่งว่าง เงื่อนไขของโรงพยาบาล และกฎหมายแรงงานออสเตรีย',en:'After B2 and recognition, yes, subject to open positions, hospital conditions, and Austrian labor law.'}},
+    {q:{th:'หลังครบสัญญา ทำงานต่อในออสเตรียได้ไหม?',en:'Can I keep working after the contract?'},a:{th:'ได้ หากทั้งสองฝ่ายประสงค์จะต่อสัญญา และเป็นไปตามกฎหมายแรงงานและการพำนักของออสเตรีย',en:'Yes, if both parties agree and Austrian labor and residence rules are met.'}}
+  ]},
+  {g:{th:'งาน NA → RN · โรงพยาบาล · เงินเดือน · สวัสดิการ',en:'NA → RN · Hospitals · Salary · Benefits'}, tab:{th:'การทำงาน & สวัสดิการ',en:'Work & benefits'}, items:[
+    {q:{th:'จะได้ไปทำงานที่โรงพยาบาลไหน?',en:'Which hospital will I be assigned to?'},a:{th:'ขึ้นอยู่กับการจับคู่ตำแหน่งงาน ความต้องการของโรงพยาบาลพาร์ตเนอร์ และคุณสมบัติของผู้สมัคร',en:'It depends on job-matching, partner-hospital needs, and your qualifications.'}},
+    {q:{th:'จะได้ไปทำงานที่เมืองไหน?',en:'Which city will I work in?'},a:{th:'ขึ้นอยู่กับตำแหน่งงานที่ได้รับ การจัดสรรของโรงพยาบาล และความต้องการของพื้นที่ในช่วงนั้น',en:'It depends on the assigned position, hospital placement, and regional demand at the time.'}},
+    {q:{th:'เลือกเมืองหรือโรงพยาบาลเองได้ไหม?',en:'Can I choose the city or hospital?'},a:{th:'แจ้งความประสงค์ได้ แต่การจัดสรรสุดท้ายขึ้นอยู่กับตำแหน่งว่าง ความเหมาะสม และการพิจารณาของโรงพยาบาลพาร์ตเนอร์',en:'You can state a preference, but final placement depends on availability, suitability, and partner-hospital approval.'}},
+    {q:{th:'หลังถึงออสเตรีย ต้องเริ่มงานทันทีไหม?',en:'Do I start work immediately after arriving?'},a:{th:'ขึ้นอยู่กับแต่ละโรงพยาบาล บางแห่งเริ่มงานทันที บางแห่งมีช่วงเตรียมความพร้อมก่อน',en:'It varies by hospital, some start immediately, others provide a preparation period first.'}},
+    {q:{th:'ระหว่างเป็น NA ได้รับเงินเดือนไหม?',en:'Do I get paid while working as an NA?'},a:{th:'ได้ รับเงินเดือนตามสัญญาจ้างงานกับโรงพยาบาล',en:'Yes, according to your employment contract with the hospital.'}},
+    {q:{th:'เมื่อถึงออสเตรีย เงินเดือนประมาณเท่าไหร่?',en:'What’s the salary after arriving?'},a:{th:'ประมาณ 1,930 ยูโรต่อเดือน (สุทธิ) ทั้งนี้ขึ้นอยู่กับเงื่อนไขการจ้าง ภาษี และสวัสดิการของแต่ละพื้นที่',en:'Approximately EUR 1,930 per month net, depending on employment terms, taxes, and local benefits.'}},
+    {q:{th:'มีประกันสุขภาพจากนายจ้างหรือโครงการไหม?',en:'Is health insurance provided?'},a:{th:'มี เมื่อเริ่มทำงานในออสเตรียจะเข้าสู่ระบบประกันสุขภาพตามระบบประกันสังคมของออสเตรีย',en:'Yes. Once employed, you’re enrolled in Austria’s public health insurance system.'}},
+    {q:{th:'หลังถึงออสเตรีย มีเจ้าหน้าที่ช่วยเรื่องเอกสารไหม?',en:'Is there help with paperwork after arrival?'},a:{th:'มี เจ้าหน้าที่ช่วยเรื่องทะเบียนที่อยู่ ใบอนุญาตพำนัก เปิดบัญชีธนาคาร และประกันสุขภาพ',en:'Yes, staff help with address registration, residence permit, opening a bank account, and health insurance.'}},
+    {q:{th:'มีบริการรับที่สนามบินไหม?',en:'Is airport pickup provided?'},a:{th:'มี เจ้าหน้าที่หรือผู้ประสานงานจะรับและพาเข้าที่พักตามแผนของโครงการ',en:'Yes, a coordinator picks you up and takes you to your accommodation.'}},
+    {q:{th:'โครงการจัดหาที่พักให้ หรือต้องหาเอง?',en:'Does the program arrange housing?'},a:{th:'โครงการและโรงพยาบาลพาร์ตเนอร์ช่วยประสานที่พักในช่วงเริ่มต้น รายละเอียดขึ้นอยู่กับแต่ละพื้นที่',en:'The program and partner hospitals help arrange initial housing; details vary by location.'}},
+    {q:{th:'ค่าที่พักต่อเดือนประมาณเท่าไหร่?',en:'What’s the monthly accommodation cost?'},a:{th:'ประมาณ 300–600 ยูโรต่อเดือน ขึ้นอยู่กับเมือง ประเภทที่พัก และเงื่อนไข',en:'Around EUR 300–600 per month, depending on city, type, and conditions.'}}
+  ]},
+  {g:{th:'ชีวิตความเป็นอยู่ · ครอบครัว · อนาคต',en:'Living · Family · Future'}, tab:{th:'ชีวิต & ครอบครัว',en:'Living & family'}, items:[
+    {q:{th:'จะได้ห้องเดี่ยวหรือห้องรวม?',en:'Private or shared room?'},a:{th:'ขึ้นอยู่กับประเภทที่พักที่ได้รับจัดสรรในแต่ละพื้นที่',en:'It depends on the accommodation assigned in each location.'}},
+    {q:{th:'ค่าครองชีพต่อเดือนในออสเตรียประมาณเท่าไหร่?',en:'What’s the monthly cost of living?'},a:{th:'ประมาณ 700–1,200 ยูโรต่อเดือน ขึ้นอยู่กับเมืองและรูปแบบการใช้ชีวิต',en:'Around EUR 700–1,200 per month, depending on city and lifestyle.'}},
+    {q:{th:'มีโรงอาหารสำหรับพนักงานไหม?',en:'Is there a staff cafeteria?'},a:{th:'โรงพยาบาลส่วนใหญ่มีโรงอาหารหรือสิ่งอำนวยความสะดวกด้านอาหารสำหรับพนักงาน',en:'Most hospitals provide a staff cafeteria or food facilities.'}},
+    {q:{th:'มีอาหารให้ระหว่างเวลาทำงานไหม?',en:'Are meals provided during work?'},a:{th:'บางโรงพยาบาลมีอาหารหรือสวัสดิการค่าอาหารให้ ขึ้นอยู่กับนโยบายของแต่ละแห่ง',en:'Some hospitals provide meals or meal allowances, depending on their policy.'}},
+    {q:{th:'พาครอบครัวไปออสเตรียด้วยได้ไหม?',en:'Can I bring my family?'},a:{th:'สามารถทำได้ในภายหลัง หากมีสถานะการพำนัก รายได้ และคุณสมบัติตามเงื่อนไขที่กฎหมายออสเตรียกำหนด',en:'Possible later, once you meet Austrian residence, income, and legal requirements.'}},
+    {q:{th:'มีรีวิวจากผู้เข้าร่วมรุ่นก่อนไหม?',en:'Are there testimonials from past participants?'},a:{th:'ขณะนี้ยังไม่มีรีวิวให้เผยแพร่ เนื่องจากเรากำลังต้อนรับพยาบาลรุ่นแรก และจะแจ้งทันทีเมื่อมีข้อมูล',en:'Not yet, we’re welcoming our first cohort now, and we’ll share reviews as soon as they’re available.'}},
+    {q:{th:'หลังครบสัญญา/ได้ใบ RN ทำงานต่อในออสเตรียได้ไหม?',en:'Can I keep working after the contract or RN recognition?'},a:{th:'ได้ หากมีคุณสมบัติตามกฎหมายแรงงานและการพำนักของออสเตรีย และได้รับการจ้างงานจากนายจ้างที่ถูกต้อง',en:'Yes, if you meet Austrian employment and residence requirements and have valid employment.'}},
+    {q:{th:'หากต้องการสมัคร ต้องเริ่มต้นอย่างไร?',en:'How do I start the application?'},a:{th:'ติดต่อเราเพื่อรับข้อมูลเบื้องต้น ส่งเอกสารสมัคร เข้าสัมภาษณ์ และดำเนินการตามขั้นตอนการคัดเลือก',en:'Contact us for initial information, submit your documents, attend an interview, and follow the selection process.'}}
+  ]}
+];
+
+/* ---------- Render FAQ (tabs + search) ---------- */
+(function(){
+  var box = document.getElementById('faqContainer');
+  var tabsBox = document.getElementById('faqTabs');
+  var input = document.getElementById('faqSearch');
+  var empty = document.getElementById('faqEmpty');
+  if(!box || !tabsBox) return;
+
+  /* Render question groups */
+  var html = '';
+  FAQ.forEach(function(group, gi){
+    html += '<div class="faq-group" data-group="'+gi+'"><h3>'+group.g.th+'</h3>';
+    group.items.forEach(function(it){
+      html += '<details><summary><span>'+it.q.th+'</span>'
+        + '<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary>'
+        + '<div class="answer">'+it.a.th+'</div></details>';
+    });
+    html += '</div>';
+  });
+  box.innerHTML = html;
+
+  /* Render category tabs (All + one per group) */
+  var tabsHtml = '<button class="faq-tab active" data-tab="all" type="button">ทั้งหมด</button>';
+  FAQ.forEach(function(group, gi){
+    tabsHtml += '<button class="faq-tab" data-tab="'+gi+'" type="button">'+group.tab.th+'</button>';
+  });
+  tabsBox.innerHTML = tabsHtml;
+
+  var activeTab = '0'; // default to first category so the list starts short
+
+  function setActiveButton(){
+    tabsBox.querySelectorAll('.faq-tab').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-tab') === activeTab);
+    });
+  }
+
+  function apply(){
+    var q = input.value.trim().toLowerCase();
+    var searching = q !== '';
+    var anyVisible = false;
+    box.querySelectorAll('.faq-group').forEach(function(grp){
+      var gi = grp.getAttribute('data-group');
+      var tabMatch = searching || activeTab === 'all' || activeTab === gi;
+      var groupVisible = false;
+      grp.querySelectorAll('details').forEach(function(d){
+        var textMatch = !searching || d.textContent.toLowerCase().indexOf(q) !== -1;
+        var vis = tabMatch && textMatch;
+        d.style.display = vis ? '' : 'none';
+        if(vis){ groupVisible = true; anyVisible = true; }
+      });
+      grp.style.display = groupVisible ? '' : 'none';
+      // show the group heading only in "All" view or while searching; hide it for a single-category tab
+      var h = grp.querySelector('h3');
+      if(h) h.style.display = (searching || activeTab === 'all') ? '' : 'none';
+    });
+    empty.hidden = anyVisible;
+  }
+
+  tabsBox.querySelectorAll('.faq-tab').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      activeTab = btn.getAttribute('data-tab');
+      if(input.value) input.value = '';   // clear search when switching category
+      setActiveButton();
+      apply();
+      btn.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+    });
+  });
+
+  input.addEventListener('input', function(){
+    if(input.value.trim() !== '' && activeTab !== 'all'){
+      activeTab = 'all';          // searching looks across every category
+      setActiveButton();
+    }
+    apply();
+  });
+
+  setActiveButton();
+  apply();
+})();
+
+/* ---------- Founder video ---------- */
+(function(){
+  var wrap = document.getElementById('maxVideo');
+  if(!wrap) return;
+  var video = wrap.querySelector('video');
+  var btn = wrap.querySelector('.vt-play');
+  btn.addEventListener('click', function(){
+    video.controls = true;
+    wrap.classList.add('playing');
+    var p = video.play();
+    if(p && p.catch){ p.catch(function(){}); }
+  });
+})();
+
+/* ---------- Featured film / commercial (plays with sound) ---------- */
+(function(){
+  var wrap = document.getElementById('filmPlayer');
+  if(!wrap) return;
+  var video = wrap.querySelector('video');
+  var btn = wrap.querySelector('.film-play');
+  btn.addEventListener('click', function(){
+    video.controls = true;
+    wrap.classList.add('playing');
+    var p = video.play();
+    if(p && p.catch){ p.catch(function(){}); }
+  });
+})();
+
+/* ---------- Ensure muted b-roll loops autoplay ---------- */
+(function(){
+  document.querySelectorAll('.collage video').forEach(function(v){
+    v.muted = true; v.setAttribute('muted','');
+    var go = function(){ var p = v.play(); if(p && p.catch){ p.catch(function(){}); } };
+    if(v.readyState >= 2) go(); else v.addEventListener('canplay', go, {once:true});
+  });
+})();
+
+/* ---------- Modals ---------- */
+(function(){
+  function open(id){ var m=document.getElementById('modal-'+id); if(!m)return; m.classList.add('open'); m.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function close(m){ m.classList.remove('open'); m.setAttribute('aria-hidden','true'); if(!document.querySelector('.modal.open')) document.body.style.overflow=''; }
+  document.addEventListener('click', function(e){
+    var o=e.target.closest('[data-modal-open]'); if(o){ e.preventDefault(); open(o.getAttribute('data-modal-open')); return; }
+    var c=e.target.closest('[data-modal-close]'); if(c){ var m=c.closest('.modal'); if(m) close(m); return; }
+    if(e.target.classList && e.target.classList.contains('modal')) close(e.target);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ var m=document.querySelector('.modal.open'); if(m) close(m); } });
+})();
+
+/* ---------- GDPR consent: Google Fonts + Meta Pixel (opt-in only) ---------- */
+(function(){
+  var KEY='hc_th_consent';
+  var HREF='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap';
+  var PIXEL_ID='2076486669922930';
+  var fontsLoaded=false;
+  function loadFonts(){
+    if(fontsLoaded) return; fontsLoaded=true;
+    var pc1=document.createElement('link'); pc1.rel='preconnect'; pc1.href='https://fonts.googleapis.com';
+    var pc2=document.createElement('link'); pc2.rel='preconnect'; pc2.href='https://fonts.gstatic.com'; pc2.crossOrigin='';
+    var l=document.createElement('link'); l.rel='stylesheet'; l.href=HREF;
+    document.head.appendChild(pc1); document.head.appendChild(pc2); document.head.appendChild(l);
+  }
+  /* Meta Pixel is loaded ONLY after the visitor opts in — never on page load. */
+  function loadPixel(){
+    if(window.__hcPixel) return; window.__hcPixel=true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+  function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function write(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
+  var banner=document.getElementById('cookieBanner');
+  function show(){ if(banner) banner.classList.add('show'); }
+  function hide(){ if(banner) banner.classList.remove('show'); }
+  var existing=read();
+  if(existing){
+    if(existing.fonts) loadFonts();
+    if(existing.marketing) loadPixel();
+  } else {
+    setTimeout(show, 600);
+  }
+  var a=document.getElementById('ckAccept'), r=document.getElementById('ckReject');
+  if(a) a.addEventListener('click', function(){ write({fonts:true, marketing:true}); loadFonts(); loadPixel(); hide(); });
+  if(r) r.addEventListener('click', function(){ write({fonts:false, marketing:false}); hide(); });
+  /* Let visitors re-open the consent bar to withdraw/change consent at any time. */
+  document.querySelectorAll('[data-cookie-manage]').forEach(function(el){
+    el.addEventListener('click', function(e){ e.preventDefault(); show(); });
+  });
+})();
+
+/* ---------- Lead form (Web3Forms + honeypot + time-trap) ---------- */
+(function(){
+  var form=document.getElementById('leadForm'); if(!form) return;
+  var errBox=document.getElementById('lfError');
+  var success=document.getElementById('leadSuccess');
+  var submitBtn=document.getElementById('lfSubmit');
+  var label=submitBtn?submitBtn.querySelector('.lf-btn-label'):null;
+  var ENDPOINT='https://api.web3forms.com/submit';
+  var loadedAt=Date.now();
+  var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
+  function showError(msgTh,msgEn){ errBox.innerHTML=isEN()?msgEn:msgTh; errBox.style.display='block'; errBox.scrollIntoView({behavior:'smooth',block:'center'}); }
+  function clearError(){ errBox.style.display='none'; errBox.innerHTML=''; }
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); clearError();
+    if(!form.checkValidity()){
+      var fi=form.querySelector(':invalid'); if(fi) fi.focus();
+      showError('กรุณากรอกข้อมูลที่จำเป็น (ชื่อ, เบอร์โทร/LINE, อีเมล) และยืนยันความยินยอม','Please complete the required fields (name, phone/LINE, email) and confirm consent.');
+      return;
+    }
+    var hp=form.querySelector('input[name="botcheck"]'); if(hp && hp.checked){ return; }
+    if(Date.now()-loadedAt < 2500){ return; }
+    var payload={};
+    new FormData(form).forEach(function(v,k){ if(k==='botcheck') return; payload[k]=(payload[k]!==undefined)?payload[k]+', '+v:v; });
+    if(payload['อีเมล']){ payload.replyto = payload['อีเมล']; }   // reply goes straight to the applicant
+    submitBtn.disabled=true;
+    var prev=label?label.textContent:'';
+    if(label) label.textContent=isEN()?'Sending…':'กำลังส่ง…';
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+    .then(function(res){ return res.json().then(function(d){ return {ok:res.ok,data:d}; }); })
+    .then(function(r){
+      if(r.ok && r.data && r.data.success){ form.hidden=true; success.hidden=false; success.scrollIntoView({behavior:'smooth',block:'center'}); if(window.fbq){ try{ fbq('track','Lead'); }catch(e){} } }
+      else { throw new Error('fail'); }
+    })
+    .catch(function(){
+      submitBtn.disabled=false; if(label) label.textContent=prev||'ส่งใบสมัคร';
+      showError('ส่งไม่สำเร็จ กรุณาลองใหม่ หรือติดต่อเราที่ <a href="mailto:support@happycare-recruitment.at">support@happycare-recruitment.at</a>','Sending failed. Please try again or email us at <a href="mailto:support@happycare-recruitment.at">support@happycare-recruitment.at</a>.');
+    });
+  });
+})();
+
+/* ---------- Motion: reveal, stagger, count-up, scrollspy, progress ---------- */
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SEL='.sec-head,.proof,.member,.ben,.step,.assured-card,.about-media,.about-copy,.opp-photos,.opp-right,.split>div,.req-card,.honest,.film-player,.lead-form,.cta-contacts,.foot-col,.hero-card,.hero-trust';
+
+  function countMoney(scope){
+    if(reduce) return;
+    scope.querySelectorAll('.money-row .n').forEach(function(n){
+      var t=n.firstChild; if(!t||t.nodeType!==3) return;
+      var target=parseInt(t.textContent.replace(/[^\d]/g,''),10);
+      if(!target) return;
+      var prefix=(t.textContent.match(/^\D*/)||[''])[0], dur=1100, s=null;
+      function fmt(v){ return prefix+v.toLocaleString('en-US'); }
+      t.textContent=fmt(0);
+      (function tick(ts){ if(s===null)s=ts; var p=Math.min((ts-s)/dur,1); t.textContent=fmt(Math.round(target*(1-Math.pow(1-p,3)))); if(p<1)requestAnimationFrame(tick); })(performance.now());
+    });
+  }
+
+  try{
+    var els=[].slice.call(document.querySelectorAll(SEL));
+    els.forEach(function(el){
+      var sibs=[].filter.call(el.parentElement.children,function(c){return els.indexOf(c)!==-1;});
+      var i=sibs.indexOf(el);
+      if(sibs.length>1&&i>0) el.style.transitionDelay=Math.min(i*70,420)+'ms';
+    });
+    if(('IntersectionObserver' in window)&&!reduce){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('in'); if(e.target.classList.contains('opp-right')) countMoney(e.target); io.unobserve(e.target); }
+        });
+      },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      document.documentElement.classList.remove('anim');
+      els.forEach(function(el){ el.classList.add('in'); });
+    }
+  }catch(err){ document.documentElement.classList.remove('anim'); }
+
+  var navMap={};
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){ navMap[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting&&navMap[e.target.id]){ for(var k in navMap) navMap[k].classList.remove('active'); navMap[e.target.id].classList.add('active'); } });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(navMap).forEach(function(id){ var s=document.getElementById(id); if(s) spy.observe(s); });
+  }
+
+  var header=document.querySelector('header'), bar=document.getElementById('scrollProgress'), ticking=false;
+  function onScroll(){
+    var de=document.documentElement, sc=de.scrollHeight-de.clientHeight, p=sc>0?de.scrollTop/sc:0;
+    if(bar) bar.style.width=(p*100)+'%';
+    if(header) header.classList.toggle('scrolled', de.scrollTop>16);
+    ticking=false;
+  }
+  addEventListener('scroll', function(){ if(!ticking){ requestAnimationFrame(onScroll); ticking=true; } }, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
