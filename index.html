@@ -402,6 +402,17 @@
   .field > label{display:block;font-weight:500;font-size:13.5px;color:var(--charcoal);margin-bottom:7px}
   .field .req{color:var(--emerald)}
   .field-hint{margin-top:7px;font-size:12.5px;color:var(--mint);font-weight:400;line-height:1.5}
+  .radio-group{display:flex;flex-direction:column;gap:9px;margin-top:5px}
+  .radio-opt{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:#3d524b;font-weight:300;cursor:pointer;
+    padding:12px 15px;border:1.5px solid var(--divider);border-radius:12px;transition:border-color .15s,background .15s}
+  .radio-opt:hover{border-color:var(--mint)}
+  .lead-form .radio-opt input[type="radio"]{-webkit-appearance:auto;appearance:auto;width:18px;height:18px;min-width:18px;
+    margin:1px 0 0;padding:0;border:0;border-radius:50%;background:none;box-shadow:none;flex-shrink:0;accent-color:var(--forest);cursor:pointer}
+  .radio-opt:has(input:checked){border-color:var(--emerald);background:rgba(15,123,104,.06)}
+  .degree-block{display:flex;gap:11px;align-items:flex-start;margin-top:13px;background:rgba(190,55,55,.07);
+    border:1px solid rgba(190,55,55,.28);border-radius:12px;padding:13px 16px;font-size:13.5px;color:#a33;font-weight:300;line-height:1.6}
+  .degree-block svg{width:20px;height:20px;color:#c0504d;flex-shrink:0;margin-top:1px}
+  .btn:disabled,.btn-primary:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
   .lead-form input,.lead-form select,.lead-form textarea{
     width:100%;font-family:var(--body);font-size:15px;color:var(--charcoal);
     padding:12px 14px;border:1.5px solid var(--divider);border-radius:12px;background:#fff;
@@ -1118,14 +1129,16 @@
           </div>
         </div>
         <div class="field">
-          <label><span class="th">คุณสมบัติของคุณ</span></label>
-          <select name="คุณสมบัติ">
-            <option value="" data-th="เลือก…">เลือก…</option>
-            <option data-th="มีวุฒิปริญญาตรีพยาบาล (4 ปี) + ใบ RN">มีวุฒิปริญญาตรีพยาบาล (4 ปี) + ใบ RN</option>
-            <option data-th="กำลังศึกษา ปริญญาตรีพยาบาล (ปีสุดท้าย)">กำลังศึกษา ปริญญาตรีพยาบาล (ปีสุดท้าย)</option>
-            <option data-th="อื่น ๆ / ขอสอบถามเพิ่มเติม">อื่น ๆ / ขอสอบถามเพิ่มเติม</option>
-          </select>
-          <p class="field-hint"><span class="th">โครงการรับเฉพาะพยาบาลวิชาชีพที่จบปริญญาตรีพยาบาลศาสตร์เท่านั้น</span></p>
+          <label><span class="th">คุณมีวุฒิปริญญาตรี พยาบาลศาสตรบัณฑิต หรือไม่?</span> <span class="req">*</span></label>
+          <div class="radio-group" id="degreeGroup">
+            <label class="radio-opt"><input type="radio" name="วุฒิพยาบาล" value="มีวุฒิปริญญาตรีพยาบาลศาสตร์แล้ว" required><span class="th">มีแล้ว — สำเร็จปริญญาตรีพยาบาลศาสตร์</span></label>
+            <label class="radio-opt"><input type="radio" name="วุฒิพยาบาล" value="กำลังศึกษาอยู่ปีสุดท้าย"><span class="th">ยังไม่จบ แต่กำลังศึกษาอยู่ (ปีสุดท้าย)</span></label>
+            <label class="radio-opt"><input type="radio" name="วุฒิพยาบาล" value="ยังไม่มีวุฒิ"><span class="th">ยังไม่มี / ไม่ได้เรียนพยาบาล</span></label>
+          </div>
+          <div class="degree-block" id="degreeBlock" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <span class="th">ขออภัย โครงการนี้รับเฉพาะพยาบาลที่สำเร็จการศึกษา (หรือกำลังศึกษาปีสุดท้าย) ระดับปริญญาตรีพยาบาลศาสตร์เท่านั้น จึงยังไม่สามารถรับใบสมัครนี้ได้ หากคุณกำลังจะสำเร็จการศึกษา เรายินดีต้อนรับคุณเมื่อพร้อม 🌿</span>
+          </div>
         </div>
         <div class="field">
           <label><span class="th">ข้อความ (ถ้ามี)</span></label>
@@ -1536,6 +1549,11 @@ var FAQ = [
   var ENDPOINT='https://api.web3forms.com/submit';
   var loadedAt=Date.now();
   var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
+  // Degree gate: applicants without a nursing degree cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
+  var degBlockEl=document.getElementById('degreeBlock');
+  function isDegreeBlocked(){ var d=form.querySelector('input[name="วุฒิพยาบาล"]:checked'); return !!(d && d.value==='ยังไม่มีวุฒิ'); }
+  function updateDegreeGate(){ var b=isDegreeBlocked(); if(degBlockEl) degBlockEl.hidden=!b; if(submitBtn) submitBtn.disabled=b; }
+  form.querySelectorAll('input[name="วุฒิพยาบาล"]').forEach(function(r){ r.addEventListener('change', updateDegreeGate); });
   function showError(msgTh,msgEn){ errBox.innerHTML=isEN()?msgEn:msgTh; errBox.style.display='block'; errBox.scrollIntoView({behavior:'smooth',block:'center'}); }
   function clearError(){ errBox.style.display='none'; errBox.innerHTML=''; }
   form.addEventListener('submit', function(e){
@@ -1545,6 +1563,7 @@ var FAQ = [
       showError('กรุณากรอกข้อมูลที่จำเป็น (ชื่อ, เบอร์โทร/LINE, อีเมล) และยืนยันความยินยอม','Please complete the required fields (name, phone/LINE, email) and confirm consent.');
       return;
     }
+    if(isDegreeBlocked()){ updateDegreeGate(); if(degBlockEl) degBlockEl.scrollIntoView({behavior:'smooth',block:'center'}); return; }
     var hp=form.querySelector('input[name="botcheck"]'); if(hp && hp.checked){ return; }
     if(Date.now()-loadedAt < 2500){ return; }
     var payload={};
