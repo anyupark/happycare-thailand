@@ -12,6 +12,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/thailand-nurse-portrait.jpg">
 <!-- Google Fonts (Kanit, Noto Sans Thai, Montserrat, Poppins) จะโหลดหลังจากได้รับความยินยอม ดู cookie banner -->
 <style>
   :root{
@@ -601,7 +602,7 @@
 <!-- ============ HEADER ============ -->
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo"><img src="assets/logo.png" alt="HappyCare Recruitment"></a>
+    <a href="#top" class="logo"><img decoding="async" src="assets/logo.png" alt="HappyCare Recruitment"></a>
     <nav class="nav-links">
       <a href="#opportunity"><span class="th">โอกาส</span></a>
       <a href="#about"><span class="th">เราเป็นใคร</span></a>
@@ -782,22 +783,22 @@
       <div class="team-group-head"><span class="fl">🇦🇹</span><span class="th">ทีมในออสเตรีย</span></div>
       <div class="team-grid">
         <div class="member">
-          <div class="photo"><img src="assets/team-max.jpg" alt="Maximilian Wieser"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-max.jpg" alt="Maximilian Wieser"></div>
           <h3>Maximilian Wieser</h3>
           <p><span class="th">ผู้ก่อตั้ง &amp; กรรมการผู้จัดการ</span></p>
         </div>
         <div class="member">
-          <div class="photo"><img src="assets/team-nadja.jpg" alt="Nadja Wieser"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-nadja.jpg" alt="Nadja Wieser"></div>
           <h3>Nadja Wieser, BA</h3>
           <p><span class="th">ผู้จัดการดูแลการปรับตัว</span></p>
         </div>
         <div class="member">
-          <div class="photo"><img src="assets/team-christine.jpg" alt="Christine Pintscher"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-christine.jpg" alt="Christine Pintscher"></div>
           <h3>Christine Pintscher, MA</h3>
           <p><span class="th">ผู้จัดการการรับรองวุฒิ (Nostrifikation)</span></p>
         </div>
         <div class="member">
-          <div class="photo"><img src="assets/team-sabrina.jpg" alt="Sabrina Gingel"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-sabrina.jpg" alt="Sabrina Gingel"></div>
           <h3>Sabrina Gingel</h3>
           <p><span class="th">ผู้ช่วยผู้บริหาร</span></p>
         </div>
@@ -809,12 +810,12 @@
       <div class="team-group-head"><span class="fl">🇹🇭</span><span class="th">ทีมในประเทศไทย</span></div>
       <div class="team-grid three">
         <div class="member">
-          <div class="photo"><img src="assets/team-michaela.jpg" alt="Michaela"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-michaela.jpg" alt="Michaela"></div>
           <h3>Michaela</h3>
           <p><span class="th">ดูแลผู้สมัคร · ตอบกลับและนัดหมายสัมภาษณ์</span></p>
         </div>
         <div class="member">
-          <div class="photo"><img src="assets/team-belle.jpg" alt="Belle"></div>
+          <div class="photo"><img loading="lazy" decoding="async" src="assets/team-belle.jpg" alt="Belle"></div>
           <h3>Belle</h3>
           <p><span class="th">ดูแลผู้สมัคร · ตอบกลับและนัดหมายสัมภาษณ์</span></p>
         </div>
@@ -842,9 +843,9 @@
     </div>
     <div class="opp-grid">
       <div class="opp-photos" aria-hidden="true">
-        <div class="opp-photo opp-a"><img src="assets/life-care.jpg" alt="Nursing in Austria"></div>
-        <div class="opp-photo opp-b"><img src="assets/life-ward.jpg" alt="Hospital ward"></div>
-        <div class="opp-photo opp-c"><img src="assets/life-cta.jpg" alt="New life in Austria"></div>
+        <div class="opp-photo opp-a"><img loading="lazy" decoding="async" src="assets/life-care.jpg" alt="Nursing in Austria"></div>
+        <div class="opp-photo opp-b"><img loading="lazy" decoding="async" src="assets/life-ward.jpg" alt="Hospital ward"></div>
+        <div class="opp-photo opp-c"><img loading="lazy" decoding="async" src="assets/life-cta.jpg" alt="New life in Austria"></div>
         <div class="opp-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>
           <span class="th">ชีวิตที่ดีขึ้น เริ่มจากคุณ</span></div>
       </div>
@@ -923,11 +924,11 @@
   <div class="wrap split">
     <div class="collage">
       <div class="c c-main">
-        <video src="assets/classroom-loop.mp4" poster="assets/classroom-loop-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+        <video data-lazy-src="assets/classroom-loop.mp4" poster="assets/classroom-loop-poster.jpg" autoplay muted loop playsinline preload="none"></video>
         <span class="live-badge"><span class="rdot"></span><span class="th">ห้องเรียนจริงของเรา · กรุงเทพฯ</span></span>
       </div>
-      <div class="c"><img src="assets/class-students.jpg" alt="Students learning together in Bangkok"></div>
-      <div class="c"><img src="assets/class-teacher.jpg" alt="German lesson with our coach"></div>
+      <div class="c"><img loading="lazy" decoding="async" src="assets/class-students.jpg" alt="Students learning together in Bangkok"></div>
+      <div class="c"><img loading="lazy" decoding="async" src="assets/class-teacher.jpg" alt="German lesson with our coach"></div>
     </div>
     <div>
       <span class="eyebrow"><span class="th">โรงเรียนภาษาของเรา</span></span>
@@ -1144,7 +1145,7 @@
         <div class="fs-line">
           <p class="fs-line-label"><span class="th">ขั้นตอนต่อไป: เพิ่มเพื่อนใน LINE เพื่อให้เราติดต่อกลับได้เร็วขึ้น</span></p>
           <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" class="line-btn-official" aria-label="เพิ่มเพื่อนใน LINE">
-            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อนใน LINE" loading="lazy">
+            <img src="assets/line-add-friend.png" decoding="async" alt="เพิ่มเพื่อนใน LINE" loading="lazy">
           </a>
         </div>
       </div>
@@ -1157,7 +1158,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img src="assets/logo-white.png" alt="HappyCare Recruitment" class="foot-logo">
+        <img loading="lazy" decoding="async" src="assets/logo-white.png" alt="HappyCare Recruitment" class="foot-logo">
         <p><span class="th">องค์กรจัดหางานสัญชาติออสเตรีย ที่นำพยาบาลไทยวุฒิปริญญาตรี สู่อาชีพและชีวิตใหม่ในออสเตรีย อย่างถูกต้องและมีการดูแลครบวงจร</span>
            </p>
         <div class="foot-socials">
@@ -1188,10 +1189,10 @@
         <span class="fl-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>LINE</span>
         <h4><span class="th">คุยกับเราทาง LINE ได้เลย</span></h4>
         <p><span class="th">สแกน QR โค้ด หรือกดปุ่มด้านล่าง เพื่อเพิ่มเราเป็นเพื่อนและเริ่มพูดคุยได้ทันที</span></p>
-        <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" class="line-add-btn" aria-label="เพิ่มเพื่อนใน LINE"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อนใน LINE" loading="lazy"></a>
+        <a href="https://lin.ee/6tdrDj0" target="_blank" rel="noopener" class="line-add-btn" aria-label="เพิ่มเพื่อนใน LINE"><img src="assets/line-add-friend.png" decoding="async" alt="เพิ่มเพื่อนใน LINE" loading="lazy"></a>
       </div>
       <div class="foot-line-qr">
-        <img src="assets/line-qr.png" alt="LINE QR — HappyCare Thailand" width="180" height="180">
+        <img loading="lazy" decoding="async" src="assets/line-qr.png" alt="LINE QR — HappyCare Thailand" width="180" height="180">
         <span class="th">สแกนเพื่อเพิ่มเพื่อน</span>
       </div>
     </div>
@@ -1418,6 +1419,16 @@ var FAQ = [
 
   setActiveButton();
   apply();
+})();
+
+/* ---------- Lazy autoplay bg video (defer heavy download until near viewport) ---------- */
+(function(){
+  var v=document.querySelector('video[data-lazy-src]');
+  if(!v) return;
+  function go(){ if(!v.src){ v.src=v.getAttribute('data-lazy-src'); var p=v.play&&v.play(); if(p&&p.catch)p.catch(function(){}); } }
+  if(!('IntersectionObserver' in window)){ go(); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ go(); io.disconnect(); } }); },{rootMargin:'400px'});
+  io.observe(v);
 })();
 
 /* ---------- Founder video ---------- */
