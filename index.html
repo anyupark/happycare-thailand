@@ -413,6 +413,14 @@
     border:1px solid rgba(190,55,55,.28);border-radius:12px;padding:13px 16px;font-size:13.5px;color:#a33;font-weight:300;line-height:1.6}
   .degree-block[hidden]{display:none}
   .degree-block svg{width:20px;height:20px;color:#c0504d;flex-shrink:0;margin-top:1px}
+  .why-link{display:inline-flex;align-items:center;gap:7px;margin-top:11px;font-family:var(--body);font-size:13px;font-weight:500;
+    color:var(--emerald);background:none;border:0;padding:2px 0;cursor:pointer;transition:color .15s}
+  .why-link svg{width:15px;height:15px}
+  .why-link:hover{color:var(--forest);text-decoration:underline}
+  .school-note{display:flex;gap:12px;align-items:flex-start;margin-top:24px;background:rgba(65,169,154,.09);
+    border:1px solid rgba(65,169,154,.28);border-radius:14px;padding:15px 18px;font-size:13.5px;color:#3d524b;font-weight:300;line-height:1.65}
+  .school-note svg{width:21px;height:21px;color:var(--mint);flex-shrink:0;margin-top:1px}
+  .school-note b{color:var(--forest);font-weight:600}
   .btn:disabled,.btn-primary:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
   .lead-form input,.lead-form select,.lead-form textarea{
     width:100%;font-family:var(--body);font-size:15px;color:var(--charcoal);
@@ -957,6 +965,10 @@
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span class="th">ระยะเวลาเรียนจาก A1 ถึง B1 ประมาณ 8–10 เดือน</span></li>
       </ul>
+      <div class="school-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span class="th">ปัจจุบันการเรียนภาษาเยอรมันกับเราเป็นแบบ <b>On-site ที่กรุงเทพฯ เท่านั้น</b> เรายังไม่มีคอร์สออนไลน์ (กำลังพัฒนาอยู่) คุณสามารถติดต่อเราเพื่อสอบถามรายละเอียดโครงการได้ทุกเมื่อ และระหว่างนี้ หากต้องการ คุณสามารถเริ่มเรียนภาษาด้วยตนเองไปก่อนได้</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1166,6 +1178,7 @@
             <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="A2"><span class="th">ระดับ A2</span></label>
             <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="สูงกว่า A2"><span class="th">สูงกว่าระดับ A2</span></label>
           </div>
+          <button type="button" class="why-link" data-modal-open="whyenglish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span class="th">ทำไมภาษาอังกฤษจึงสำคัญ?</span></button>
           <div class="degree-block" id="engBlock" hidden>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
             <span class="th">โครงการนี้ต้องมีพื้นฐานภาษาอังกฤษอย่างน้อยระดับ A1 (แนะนำ A2) จึงยังไม่สามารถรับใบสมัครนี้ได้ในขณะนี้ หากคุณเริ่มเรียนแล้ว ยินดีต้อนรับคุณอีกครั้ง 🌿</span>
@@ -1300,6 +1313,17 @@
       <h4><span class="th">สิทธิของคุณ</span></h4>
       <p><span class="th">คุณมีสิทธิเข้าถึง แก้ไข ลบ และคัดค้านการใช้ข้อมูลของคุณได้ตาม GDPR โดยติดต่อเราทางอีเมลด้านบน หน่วยงานกำกับดูแล: Österreichische Datenschutzbehörde, Wien (dsb.gv.at)</span>
          </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-whyenglish" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h3><span class="th">ทำไมภาษาอังกฤษจึงสำคัญ?</span></h3><button class="modal-close" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-body">
+      <p><span class="th">ภาษาเยอรมันใช้ตัวอักษรเกือบเหมือนกับภาษาอังกฤษ เพราะเป็น<strong>อักษรละตินชุดเดียวกัน</strong> ดังนั้นถ้าคุณมีพื้นฐานภาษาอังกฤษอยู่แล้ว การเรียนภาษาเยอรมันกับเราจะง่ายและเร็วขึ้นมาก</span></p>
+      <p><span class="th">ถ้าตอนนี้คุณยังไม่มีพื้นฐานภาษาอังกฤษ ไม่ต้องกังวล คุณสามารถเริ่มเรียนด้วยตัวเองก่อนได้ (ส่วนภาษาอังกฤษนี้คุณเรียนเองก่อน ไม่ได้เรียนกับเรา)</span></p>
+      <p><span class="th">เพียงคุณมีภาษาอังกฤษระดับ <strong>A1</strong> หรืออย่างน้อย <strong>A2</strong> ก่อน เส้นทางการเรียนภาษาเยอรมันของคุณก็จะราบรื่นและเร็วขึ้นมาก และเราพร้อมต้อนรับคุณเสมอเมื่อคุณพร้อม 🌿</span></p>
     </div>
   </div>
 </div>
