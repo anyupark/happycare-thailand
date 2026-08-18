@@ -1147,6 +1147,31 @@
           </div>
         </div>
         <div class="field">
+          <label><span class="th">อายุของคุณ</span> <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-opt"><input type="radio" name="อายุ" value="ไม่เกิน 40 ปี" required><span class="th">อายุไม่เกิน 40 ปี</span></label>
+            <label class="radio-opt"><input type="radio" name="อายุ" value="เกิน 40 ปี — มีภาษาเยอรมัน A2 ขึ้นไป"><span class="th">อายุมากกว่า 40 ปี — และมีภาษาเยอรมันระดับ A2 ขึ้นไปแล้ว</span></label>
+            <label class="radio-opt"><input type="radio" name="อายุ" value="เกิน 40 ปี — ยังไม่มีภาษาเยอรมัน"><span class="th">อายุมากกว่า 40 ปี — และยังไม่มีภาษาเยอรมัน</span></label>
+          </div>
+          <div class="degree-block" id="ageBlock" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <span class="th">โดยปกติเรารับเฉพาะผู้ที่อายุไม่เกิน 40 ปี ยกเว้นผู้ที่มีพื้นฐานภาษาเยอรมันระดับ A2 ขึ้นไปอยู่แล้ว จึงยังไม่สามารถรับใบสมัครนี้ได้ในขณะนี้</span>
+          </div>
+        </div>
+        <div class="field">
+          <label><span class="th">ทักษะภาษาอังกฤษของคุณ</span> <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="ยังไม่มีพื้นฐาน" required><span class="th">ยังไม่มีพื้นฐานเลย</span></label>
+            <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="A1"><span class="th">ระดับ A1</span></label>
+            <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="A2"><span class="th">ระดับ A2</span></label>
+            <label class="radio-opt"><input type="radio" name="ภาษาอังกฤษ" value="สูงกว่า A2"><span class="th">สูงกว่าระดับ A2</span></label>
+          </div>
+          <div class="degree-block" id="engBlock" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <span class="th">โครงการนี้ต้องมีพื้นฐานภาษาอังกฤษอย่างน้อยระดับ A1 (แนะนำ A2) จึงยังไม่สามารถรับใบสมัครนี้ได้ในขณะนี้ หากคุณเริ่มเรียนแล้ว ยินดีต้อนรับคุณอีกครั้ง 🌿</span>
+          </div>
+        </div>
+        <div class="field">
           <label><span class="th">ข้อความ (ถ้ามี)</span></label>
           <textarea name="ข้อความ" data-th="มีอะไรอยากถามเราไหม?" placeholder="มีอะไรอยากถามเราไหม?"></textarea>
         </div>
@@ -1555,11 +1580,24 @@ var FAQ = [
   var ENDPOINT='https://api.web3forms.com/submit';
   var loadedAt=Date.now();
   var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
-  // Degree gate: applicants without a nursing degree cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
-  var degBlockEl=document.getElementById('degreeBlock');
-  function isDegreeBlocked(){ var d=form.querySelector('input[name="วุฒิพยาบาล"]:checked'); return !!(d && d.value==='ยังไม่มีวุฒิ'); }
-  function updateDegreeGate(){ var b=isDegreeBlocked(); if(degBlockEl) degBlockEl.hidden=!b; if(submitBtn) submitBtn.disabled=b; }
-  form.querySelectorAll('input[name="วุฒิพยาบาล"]').forEach(function(r){ r.addEventListener('change', updateDegreeGate); });
+  // Qualifying gates: unqualified applicants cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
+  var GATES=[
+    {name:'วุฒิพยาบาล', bad:'ยังไม่มีวุฒิ', el:document.getElementById('degreeBlock')},
+    {name:'อายุ', bad:'เกิน 40 ปี — ยังไม่มีภาษาเยอรมัน', el:document.getElementById('ageBlock')},
+    {name:'ภาษาอังกฤษ', bad:'ยังไม่มีพื้นฐาน', el:document.getElementById('engBlock')}
+  ];
+  function firstBlocked(){
+    var first=null;
+    GATES.forEach(function(g){
+      var sel=form.querySelector('input[name="'+g.name+'"]:checked');
+      var bad=!!(sel && sel.value===g.bad);
+      if(g.el) g.el.hidden=!bad;
+      if(bad && !first) first=g;
+    });
+    return first;
+  }
+  function updateGates(){ var f=firstBlocked(); if(submitBtn) submitBtn.disabled=!!f; return f; }
+  GATES.forEach(function(g){ form.querySelectorAll('input[name="'+g.name+'"]').forEach(function(r){ r.addEventListener('change', updateGates); }); });
   function showError(msgTh,msgEn){ errBox.innerHTML=isEN()?msgEn:msgTh; errBox.style.display='block'; errBox.scrollIntoView({behavior:'smooth',block:'center'}); }
   function clearError(){ errBox.style.display='none'; errBox.innerHTML=''; }
   form.addEventListener('submit', function(e){
@@ -1569,7 +1607,7 @@ var FAQ = [
       showError('กรุณากรอกข้อมูลที่จำเป็น (ชื่อ, เบอร์โทรศัพท์, อีเมล) และยืนยันความยินยอม','Please complete the required fields (name, phone, email) and confirm consent.');
       return;
     }
-    if(isDegreeBlocked()){ updateDegreeGate(); if(degBlockEl) degBlockEl.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    var blk=updateGates(); if(blk){ if(blk.el) blk.el.scrollIntoView({behavior:'smooth',block:'center'}); return; }
     var hp=form.querySelector('input[name="botcheck"]'); if(hp && hp.checked){ return; }
     if(Date.now()-loadedAt < 2500){ return; }
     var payload={};
