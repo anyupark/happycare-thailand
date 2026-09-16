@@ -1643,7 +1643,9 @@ var FAQ = [
     fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
     .then(function(res){ return res.json().then(function(d){ return {ok:res.ok,data:d}; }); })
     .then(function(r){
-      if(r.ok && r.data && r.data.success){ form.hidden=true; success.hidden=false; success.scrollIntoView({behavior:'smooth',block:'center'}); if(window.fbq){ try{ fbq('track','Lead'); }catch(e){} } }
+      if(r.ok && r.data && r.data.success){ form.hidden=true; success.hidden=false; success.scrollIntoView({behavior:'smooth',block:'center'});
+        // Meta restricts 'Lead' on this pixel (suppressed client-side) -> SubmitApplication is the conversion; Lead kept in case the restriction is lifted
+        if(window.fbq){ try{ fbq('track','SubmitApplication'); fbq('track','Lead'); }catch(e){} } }
       else { throw new Error('fail'); }
     })
     .catch(function(){
