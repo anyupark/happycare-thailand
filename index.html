@@ -589,6 +589,7 @@
   .modal-body h4{font-family:var(--head);font-weight:600;color:var(--forest);font-size:14.5px;margin:20px 0 9px;letter-spacing:.02em}
   .modal-body h4:first-child{margin-top:0}
   .modal-body p{margin-bottom:12px}
+  .modal-body .policy-updated{margin:18px 0 0;font-size:12.5px;color:#7a8a83}
   .modal-body strong{color:var(--forest);font-weight:600}
   .modal-body a{color:var(--emerald);text-decoration:underline}
   .modal-body address{font-style:normal;background:var(--light-gray);padding:14px 18px;border-radius:12px;display:block;margin-bottom:14px;line-height:1.6}
@@ -1268,7 +1269,7 @@
 <!-- ============ COOKIE BANNER ============ -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="คุกกี้">
   <h4>ความเป็นส่วนตัว &amp; คุกกี้</h4>
-  <p>เราใช้คุกกี้เพื่อการแสดงผล (ฟอนต์จาก Google Fonts) และเพื่อวัดผลโฆษณาผ่าน Meta Pixel (Facebook) เครื่องมือเหล่านี้จะทำงานก็ต่อเมื่อคุณกด &ldquo;ยอมรับ&rdquo; เท่านั้น หากปฏิเสธ เราจะไม่โหลดเครื่องมือติดตามใด ๆ อ่านรายละเอียดใน<button class="link-btn" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button></p>
+  <p>เราใช้คุกกี้เพื่อการแสดงผล (ฟอนต์จาก Google Fonts) และเพื่อวัดผลโฆษณาผ่าน Meta Pixel (Facebook) และ X Pixel (Twitter) เครื่องมือเหล่านี้จะทำงานก็ต่อเมื่อคุณกด &ldquo;ยอมรับ&rdquo; เท่านั้น หากปฏิเสธ เราจะไม่โหลดเครื่องมือติดตามใด ๆ อ่านรายละเอียดใน<button class="link-btn" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button></p>
   <div class="cookie-actions">
     <button class="btn-ck btn-ck-accept" id="ckAccept" type="button">ยอมรับ</button>
     <button class="btn-ck btn-ck-reject" id="ckReject" type="button">ปฏิเสธ</button>
@@ -1309,10 +1310,13 @@
       <p><span class="th">เมื่อคุณให้ความยินยอม เราจะโหลดฟอนต์จาก Google Fonts (Google Ireland Limited) ซึ่งอาจมีการส่ง IP ของคุณไปยัง Google คุณสามารถปฏิเสธได้ที่แถบคุกกี้</span>
          </p>
       <h4>Meta Pixel (Facebook)</h4>
-      <p>เมื่อคุณให้ความยินยอม เราใช้ Meta Pixel ของ Meta Platforms Ireland Limited เพื่อวัดผลและปรับปรุงประสิทธิภาพโฆษณาของเราบน Facebook และ Instagram เครื่องมือนี้อาจตั้งคุกกี้และส่งข้อมูลการใช้งาน (เช่น หมายเลข IP และหน้าที่คุณเข้าชม) ไปยัง Meta ซึ่งอาจมีการประมวลผลนอกสหภาพยุโรป รวมถึงสหรัฐอเมริกา ภายใต้ Standard Contractual Clauses ของสหภาพยุโรป ฐานทางกฎหมายคือความยินยอมของคุณ (มาตรา 6(1)(a) GDPR) คุณสามารถปฏิเสธหรือถอนความยินยอมได้ทุกเมื่อผ่านปุ่ม &ldquo;จัดการคุกกี้&rdquo; ด้านล่าง โดยไม่กระทบต่อการใช้งานเว็บไซต์</p>
+      <p>เมื่อคุณให้ความยินยอม เราใช้ Meta Pixel ของ Meta Platforms Ireland Limited เพื่อวัดผลและปรับปรุงประสิทธิภาพโฆษณาของเราบน Facebook และ Instagram เครื่องมือนี้อาจตั้งคุกกี้และส่งข้อมูลการใช้งาน (เช่น หมายเลข IP หน้าที่คุณเข้าชม และการส่งใบสมัคร) ไปยัง Meta ซึ่งอาจมีการประมวลผลนอกสหภาพยุโรป รวมถึงสหรัฐอเมริกา ภายใต้ Standard Contractual Clauses ของสหภาพยุโรป ฐานทางกฎหมายคือความยินยอมของคุณ (มาตรา 6(1)(a) GDPR) คุณสามารถปฏิเสธหรือถอนความยินยอมได้ทุกเมื่อผ่านปุ่ม &ldquo;จัดการคุกกี้&rdquo; ด้านล่าง โดยไม่กระทบต่อการใช้งานเว็บไซต์</p>
+      <h4>X Pixel (Twitter)</h4>
+      <p>เมื่อคุณให้ความยินยอม เราใช้ X Pixel ของ X Internet Unlimited Company (One Cumberland Place, Fenian Street, Dublin 2, ไอร์แลนด์) เพื่อวัดผลและปรับปรุงประสิทธิภาพโฆษณาของเราบน X (Twitter) เครื่องมือนี้อาจตั้งคุกกี้และส่งข้อมูลการใช้งาน (เช่น หมายเลข IP หน้าที่คุณเข้าชม และการส่งใบสมัคร) ไปยัง X ซึ่งอาจมีการประมวลผลนอกสหภาพยุโรป รวมถึงสหรัฐอเมริกา ภายใต้ EU-US Data Privacy Framework และ Standard Contractual Clauses ของสหภาพยุโรป ฐานทางกฎหมายคือความยินยอมของคุณ (มาตรา 6(1)(a) GDPR) คุณสามารถปฏิเสธหรือถอนความยินยอมได้ทุกเมื่อผ่านปุ่ม &ldquo;จัดการคุกกี้&rdquo; ด้านล่าง โดยไม่กระทบต่อการใช้งานเว็บไซต์</p>
       <h4><span class="th">สิทธิของคุณ</span></h4>
       <p><span class="th">คุณมีสิทธิเข้าถึง แก้ไข ลบ และคัดค้านการใช้ข้อมูลของคุณได้ตาม GDPR โดยติดต่อเราทางอีเมลด้านบน หน่วยงานกำกับดูแล: Österreichische Datenschutzbehörde, Wien (dsb.gv.at)</span>
          </p>
+      <p class="policy-updated"><span class="th">ปรับปรุงล่าสุด: 17 กันยายน 2026</span></p>
     </div>
   </div>
 </div>
@@ -1549,11 +1553,13 @@ var FAQ = [
   document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ var m=document.querySelector('.modal.open'); if(m) close(m); } });
 })();
 
-/* ---------- GDPR consent: Google Fonts + Meta Pixel (opt-in only) ---------- */
+/* ---------- GDPR consent: Google Fonts + Meta Pixel + X Pixel (opt-in only) ---------- */
 (function(){
   var KEY='hc_th_consent';
   var HREF='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap';
   var PIXEL_ID='2076486669922930';
+  var X_PIXEL_ID='rfbth';
+  var CONSENT_V=2;   // bump when a tracker is added: earlier opt-ins never covered it, so ask again
   var fontsLoaded=false;
   function loadFonts(){
     if(fontsLoaded) return; fontsLoaded=true;
@@ -1573,6 +1579,14 @@ var FAQ = [
     fbq('init', PIXEL_ID);
     fbq('track', 'PageView');
   }
+  /* X (Twitter) conversion tracking base code, same opt-in rule as the Meta Pixel. */
+  function loadXPixel(){
+    if(window.__hcX) return; window.__hcX=true;
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    twq('config', X_PIXEL_ID);
+  }
   function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
   function write(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
   var banner=document.getElementById('cookieBanner');
@@ -1581,13 +1595,16 @@ var FAQ = [
   var existing=read();
   if(existing){
     if(existing.fonts) loadFonts();
-    if(existing.marketing) loadPixel();
+    if(existing.marketing){
+      loadPixel();
+      if(existing.v>=CONSENT_V) loadXPixel(); else setTimeout(show, 600);
+    }
   } else {
     setTimeout(show, 600);
   }
   var a=document.getElementById('ckAccept'), r=document.getElementById('ckReject');
-  if(a) a.addEventListener('click', function(){ write({fonts:true, marketing:true}); loadFonts(); loadPixel(); hide(); });
-  if(r) r.addEventListener('click', function(){ write({fonts:false, marketing:false}); hide(); });
+  if(a) a.addEventListener('click', function(){ write({fonts:true, marketing:true, v:CONSENT_V}); loadFonts(); loadPixel(); loadXPixel(); hide(); });
+  if(r) r.addEventListener('click', function(){ write({fonts:false, marketing:false, v:CONSENT_V}); hide(); });
   /* Let visitors re-open the consent bar to withdraw/change consent at any time. */
   document.querySelectorAll('[data-cookie-manage]').forEach(function(el){
     el.addEventListener('click', function(e){ e.preventDefault(); show(); });
@@ -1602,6 +1619,7 @@ var FAQ = [
   var submitBtn=document.getElementById('lfSubmit');
   var label=submitBtn?submitBtn.querySelector('.lf-btn-label'):null;
   var ENDPOINT='https://api.web3forms.com/submit';
+  var X_LEAD_EVENT='';   // X Ads Manager event ID (tw-rfbth-xxxxx); empty until the event is created there
   var loadedAt=Date.now();
   var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
   // Qualifying gates: unqualified applicants cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
@@ -1645,7 +1663,8 @@ var FAQ = [
     .then(function(r){
       if(r.ok && r.data && r.data.success){ form.hidden=true; success.hidden=false; success.scrollIntoView({behavior:'smooth',block:'center'});
         // Meta restricts 'Lead' on this pixel (suppressed client-side) -> SubmitApplication is the conversion; Lead kept in case the restriction is lifted
-        if(window.fbq){ try{ fbq('track','SubmitApplication'); fbq('track','Lead'); }catch(e){} } }
+        if(window.fbq){ try{ fbq('track','SubmitApplication'); fbq('track','Lead'); }catch(e){} }
+        if(window.twq && X_LEAD_EVENT){ try{ twq('event', X_LEAD_EVENT, {}); }catch(e){} } }
       else { throw new Error('fail'); }
     })
     .catch(function(){
