@@ -558,15 +558,33 @@
   }
 
   /* ---------- Cookie banner & modals ---------- */
-  .cookie-banner{position:fixed;bottom:18px;left:18px;right:18px;max-width:460px;margin-left:auto;
+  .cookie-banner{position:fixed;bottom:18px;left:18px;right:18px;max-width:480px;margin-left:auto;
     background:#fff;border:1px solid var(--divider);border-radius:18px;box-shadow:0 24px 50px rgba(6,81,63,.22);
-    padding:22px 24px;font-size:13.5px;color:#3d524b;z-index:200;font-weight:300;
+    padding:16px 18px;font-size:13.5px;color:#3d524b;z-index:200;font-weight:300;
     transform:translateY(140%);transition:transform .55s cubic-bezier(.16,.84,.44,1)}
   .cookie-banner.show{transform:translateY(0)}
-  .cookie-banner h4{font-family:var(--head);font-weight:600;font-size:14.5px;color:var(--forest);margin-bottom:8px;letter-spacing:.02em}
-  .cookie-banner p{margin-bottom:14px;line-height:1.55}
   .cookie-banner .link-btn{color:var(--emerald);text-decoration:underline;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .ck-text{line-height:1.5;margin-bottom:12px}
   .cookie-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .cookie-actions[hidden]{display:none}
+  .ck-more{margin-left:auto;background:none;border:none;padding:8px 2px;font-family:var(--head);font-weight:500;font-size:12.5px;
+    color:var(--emerald);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  .ck-details{border-top:1px solid var(--divider);padding-top:4px}
+  .ck-scroll{max-height:min(52vh,420px);overflow-y:auto;overscroll-behavior:contain}
+  .ck-details .cookie-actions{padding-top:12px}
+  .ck-cat{padding:11px 0;border-bottom:1px solid var(--divider)}
+  .ck-cat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer}
+  .ck-cat-head strong{font-family:var(--head);font-weight:600;color:var(--forest);font-size:13.5px}
+  .ck-cat p{font-size:12.5px;line-height:1.5;margin-top:3px;color:#54675f}
+  .ck-always{font-size:11.5px;font-weight:500;color:var(--emerald)}
+  .ck-switch{-webkit-appearance:none;appearance:none;flex-shrink:0;width:42px;height:24px;border-radius:24px;background:#cfd8d4;
+    position:relative;cursor:pointer;transition:background .2s;margin:0}
+  .ck-switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+  .ck-switch:checked{background:var(--emerald)}
+  .ck-switch:checked::after{transform:translateX(18px)}
+  .ck-switch:focus-visible{outline:2px solid var(--emerald);outline-offset:2px}
+  .ck-policy{font-size:12px;line-height:1.5;margin:12px 0;color:#54675f}
   .btn-ck{font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.02em;
     padding:11px 18px;border-radius:36px;border:none;cursor:pointer;transition:transform .15s,background .15s,border-color .15s,color .15s}
   .btn-ck-accept{background:var(--forest);color:var(--lime);box-shadow:0 6px 16px rgba(6,81,63,.18)}
@@ -594,7 +612,7 @@
   .modal-body a{color:var(--emerald);text-decoration:underline}
   .modal-body address{font-style:normal;background:var(--light-gray);padding:14px 18px;border-radius:12px;display:block;margin-bottom:14px;line-height:1.6}
   @media(max-width:520px){
-    .cookie-banner{left:12px;right:12px;bottom:12px;padding:18px 20px;border-radius:16px}
+    .cookie-banner{left:12px;right:12px;bottom:12px;padding:14px 16px;border-radius:16px}
     .modal{padding:14px}.modal-head{padding:16px 20px}.modal-body{padding:18px 20px}
   }
   /* ---------- Motion / interactivity ---------- */
@@ -1268,11 +1286,36 @@
 
 <!-- ============ COOKIE BANNER ============ -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="คุกกี้">
-  <h4>ความเป็นส่วนตัว &amp; คุกกี้</h4>
-  <p>เราใช้คุกกี้เพื่อการแสดงผล (ฟอนต์จาก Google Fonts) เพื่อวิเคราะห์การใช้งานเว็บไซต์ผ่าน Google Analytics และเพื่อวัดผลโฆษณาผ่าน Meta Pixel (Facebook) และ X Pixel (Twitter) โดยเมื่อคุณส่งใบสมัคร เราจะส่งอีเมลและเบอร์โทรของคุณในรูปแบบเข้ารหัสให้ X ด้วย เครื่องมือเหล่านี้จะทำงานก็ต่อเมื่อคุณกด &ldquo;ยอมรับ&rdquo; เท่านั้น หากปฏิเสธ เราจะไม่โหลดเครื่องมือติดตามใด ๆ อ่านรายละเอียดใน<button class="link-btn" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button></p>
-  <div class="cookie-actions">
+  <p class="ck-text">🍪 เราใช้คุกกี้เพื่อให้เว็บไซต์แสดงผลได้ดี วิเคราะห์การใช้งาน และวัดผลโฆษณา</p>
+  <div class="cookie-actions" id="ckMainActions">
     <button class="btn-ck btn-ck-accept" id="ckAccept" type="button">ยอมรับ</button>
     <button class="btn-ck btn-ck-reject" id="ckReject" type="button">ปฏิเสธ</button>
+    <button class="ck-more" id="ckMore" type="button" aria-expanded="false" aria-controls="ckDetails">รายละเอียด</button>
+  </div>
+  <div class="ck-details" id="ckDetails" hidden>
+    <div class="ck-scroll">
+    <div class="ck-cat">
+      <div class="ck-cat-head"><strong>จำเป็น</strong><span class="ck-always">เปิดตลอด</span></div>
+      <p>จดจำการตั้งค่าคุกกี้ของคุณบนอุปกรณ์นี้ เพื่อไม่ต้องถามซ้ำ</p>
+    </div>
+    <div class="ck-cat">
+      <label class="ck-cat-head"><strong>การแสดงผล</strong><input type="checkbox" class="ck-switch" data-ck="fonts" aria-label="การแสดงผล"></label>
+      <p>ฟอนต์จาก Google Fonts ช่วยให้ตัวอักษรบนเว็บไซต์สวยงามและอ่านง่าย</p>
+    </div>
+    <div class="ck-cat">
+      <label class="ck-cat-head"><strong>การวิเคราะห์</strong><input type="checkbox" class="ck-switch" data-ck="analytics" aria-label="การวิเคราะห์"></label>
+      <p>Google Analytics ช่วยให้เราเข้าใจว่าผู้เข้าชมใช้งานเว็บไซต์อย่างไร เช่น จำนวนผู้เข้าชมและส่วนที่อ่าน เพื่อนำไปปรับปรุงเว็บไซต์</p>
+    </div>
+    <div class="ck-cat">
+      <label class="ck-cat-head"><strong>การตลาด</strong><input type="checkbox" class="ck-switch" data-ck="marketing" aria-label="การตลาด"></label>
+      <p>Meta Pixel (Facebook, Instagram) และ X Pixel ช่วยวัดผลโฆษณาของเรา เมื่อคุณส่งใบสมัคร เราจะส่งอีเมลและเบอร์โทรของคุณในรูปแบบเข้ารหัสให้ X เพื่อวัดผลโฆษณาด้วย</p>
+    </div>
+    <p class="ck-policy">อ่านข้อมูลทั้งหมดใน<button class="link-btn" type="button" data-modal-open="privacy">นโยบายความเป็นส่วนตัว</button> และเปลี่ยนการตั้งค่าได้ทุกเมื่อที่ &ldquo;จัดการคุกกี้&rdquo; ท้ายหน้าเว็บไซต์</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn-ck btn-ck-reject" id="ckSave" type="button">บันทึกการตั้งค่า</button>
+      <button class="btn-ck btn-ck-accept" id="ckAcceptAll" type="button">ยอมรับทั้งหมด</button>
+    </div>
   </div>
 </div>
 
@@ -1608,26 +1651,56 @@ var FAQ = [
   function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
   function write(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
   var banner=document.getElementById('cookieBanner');
-  function show(){ if(banner) banner.classList.add('show'); }
+  var details=document.getElementById('ckDetails'), moreBtn=document.getElementById('ckMore');
+  var switches=banner ? banner.querySelectorAll('.ck-switch') : [];
+  var mainActions=document.getElementById('ckMainActions');
+  // Details view swaps the quick Accept/Reject row for per-category switches + Save / Accept all
+  function setDetails(open){ if(!details) return; details.hidden=!open; if(mainActions) mainActions.hidden=open; if(moreBtn) moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  function show(withDetails){ if(!banner) return; setDetails(!!withDetails); banner.classList.add('show'); }
   function hide(){ if(banner) banner.classList.remove('show'); }
+  function all(on){ return {fonts:on, analytics:on, marketing:on}; }
+  // Choices saved before the category switches existed had one yes/no for everything, so analytics follows marketing
+  function choices(c){ return {fonts:!!c.fonts, analytics:('analytics' in c) ? !!c.analytics : !!c.marketing, marketing:!!c.marketing}; }
+  function applyConsent(c){ if(c.fonts) loadFonts(); if(c.analytics) loadGA(); if(c.marketing){ loadPixel(); loadXPixel(); } }
+  function clearTrackingCookies(){
+    var root='.'+location.hostname.split('.').slice(-2).join('.');
+    document.cookie.split(';').forEach(function(part){
+      var name=part.split('=')[0].trim();
+      if(!/^(_ga|_gid|_fbp|_fbc|_twclid)/.test(name)) return;
+      [location.hostname, '.'+location.hostname, root].forEach(function(d){ document.cookie=name+'=; Max-Age=0; path=/; domain='+d; });
+      document.cookie=name+'=; Max-Age=0; path=/';
+    });
+  }
+  function save(c){
+    var prev=read(), before=prev ? choices(prev) : null;
+    write({fonts:c.fonts, analytics:c.analytics, marketing:c.marketing, v:CONSENT_V});
+    hide();
+    // Loaded scripts can't be unloaded: on withdrawal, clear their cookies and reload the page clean
+    if(before && ((before.fonts && !c.fonts) || (before.analytics && !c.analytics) || (before.marketing && !c.marketing))){ clearTrackingCookies(); location.reload(); return; }
+    applyConsent(c);
+  }
+  function syncSwitches(){ var st=read(), c=st ? choices(st) : all(false); switches.forEach(function(el){ el.checked=c[el.getAttribute('data-ck')]; }); }
   var existing=read();
   // TEMPORARY (user request 2026-09-17): GA loads without consent for tag testing. Self-expires; remove this line afterwards.
   if(Date.now() < Date.parse('2026-09-18T12:00:00+07:00')) loadGA();
   if(existing){
-    if(existing.fonts) loadFonts();
-    if(existing.marketing){
-      loadPixel();
-      if(existing.v>=CONSENT_V){ loadXPixel(); loadGA(); } else setTimeout(show, 600);
+    if(existing.v>=CONSENT_V) applyConsent(choices(existing));
+    else {
+      if(existing.fonts) loadFonts();
+      if(existing.marketing){ loadPixel(); setTimeout(show, 600); }   // older opt-in: ask again before the newer tools load
     }
   } else {
     setTimeout(show, 600);
   }
-  var a=document.getElementById('ckAccept'), r=document.getElementById('ckReject');
-  if(a) a.addEventListener('click', function(){ write({fonts:true, marketing:true, v:CONSENT_V}); loadFonts(); loadPixel(); loadXPixel(); loadGA(); hide(); });
-  if(r) r.addEventListener('click', function(){ write({fonts:false, marketing:false, v:CONSENT_V}); hide(); });
-  /* Let visitors re-open the consent bar to withdraw/change consent at any time. */
+  function on(id, fn){ var el=document.getElementById(id); if(el) el.addEventListener('click', fn); }
+  on('ckAccept', function(){ save(all(true)); });
+  on('ckAcceptAll', function(){ save(all(true)); });
+  on('ckReject', function(){ save(all(false)); });
+  on('ckSave', function(){ var c={}; switches.forEach(function(el){ c[el.getAttribute('data-ck')]=el.checked; }); save(c); });
+  on('ckMore', function(){ syncSwitches(); setDetails(details.hidden); });
+  /* Let visitors re-open the consent settings to withdraw/change consent at any time. */
   document.querySelectorAll('[data-cookie-manage]').forEach(function(el){
-    el.addEventListener('click', function(e){ e.preventDefault(); show(); });
+    el.addEventListener('click', function(e){ e.preventDefault(); syncSwitches(); show(true); });
   });
 })();
 
