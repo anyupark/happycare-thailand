@@ -1559,6 +1559,7 @@ var FAQ = [
   var HREF='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap';
   var PIXEL_ID='2076486669922930';
   var X_PIXEL_ID='rfdh5';
+  var X_PAGEVIEW_EVENT='tw-rfdh5-rfdhi';   // X Events manager: page view event
   var CONSENT_V=2;   // bump when a tracker is added: earlier opt-ins never covered it, so ask again
   var fontsLoaded=false;
   function loadFonts(){
@@ -1586,6 +1587,7 @@ var FAQ = [
     },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
     a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
     twq('config', X_PIXEL_ID);
+    twq('event', X_PAGEVIEW_EVENT, {});
   }
   function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
   function write(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
@@ -1619,7 +1621,7 @@ var FAQ = [
   var submitBtn=document.getElementById('lfSubmit');
   var label=submitBtn?submitBtn.querySelector('.lf-btn-label'):null;
   var ENDPOINT='https://api.web3forms.com/submit';
-  var X_LEAD_EVENT='tw-rfdh5-rfdhi';   // X Events manager (new ads account): "TH Website - Application submitted" (Lead)
+  var X_LEAD_EVENT='tw-rfdh5-rfdi8';   // X Events manager: application submitted event
   var loadedAt=Date.now();
   var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
   // Qualifying gates: unqualified applicants cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
