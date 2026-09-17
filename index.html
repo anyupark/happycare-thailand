@@ -1562,7 +1562,7 @@ var FAQ = [
   var PIXEL_ID='2076486669922930';
   var X_PIXEL_ID='rfdh5';
   var X_PAGEVIEW_EVENT='tw-rfdh5-rfdhi';   // X Events manager: page view event
-  var GA_ID='';   // Google Analytics 4 measurement ID (G-XXXXXXXXXX); empty = off
+  var GA_ID='G-9ZKC7LMJYN';   // Google Analytics 4 property "HappyCare Thailand Website"; empty = off
   var CONSENT_V=4;   // bump when a tracker or the data it receives changes: earlier opt-ins never covered it, so ask again
   var fontsLoaded=false;
   function loadFonts(){
@@ -1597,6 +1597,8 @@ var FAQ = [
     if(!GA_ID || window.__hcGA) return; window.__hcGA=true;
     window.dataLayer=window.dataLayer||[];
     window.gtag=function(){ dataLayer.push(arguments); };
+    // Consent mode signal: only reached after opt-in; analytics allowed, Google ads uses stay off
+    gtag('consent', 'default', {analytics_storage:'granted', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied'});
     gtag('js', new Date());
     gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
     var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
