@@ -1558,7 +1558,7 @@ var FAQ = [
   var KEY='hc_th_consent';
   var HREF='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap';
   var PIXEL_ID='2076486669922930';
-  var X_PIXEL_ID='rfbth';
+  var X_PIXEL_ID='rfdh5';
   var CONSENT_V=2;   // bump when a tracker is added: earlier opt-ins never covered it, so ask again
   var fontsLoaded=false;
   function loadFonts(){
@@ -1619,7 +1619,7 @@ var FAQ = [
   var submitBtn=document.getElementById('lfSubmit');
   var label=submitBtn?submitBtn.querySelector('.lf-btn-label'):null;
   var ENDPOINT='https://api.web3forms.com/submit';
-  var X_LEAD_EVENT='tw-rfbth-rfdcz';   // X Events manager: "TH Website - Application submitted" (Lead)
+  var X_LEAD_EVENT='';   // event ID from the NEW X ads account (tw-rfdh5-xxxxx); empty = off. Old account's tw-rfbth-rfdcz retired
   var loadedAt=Date.now();
   var isEN=function(){ return document.body.getAttribute('data-lang')==='en'; };
   // Qualifying gates: unqualified applicants cannot submit -> keeps the Meta Pixel Lead signal clean (only real prospects)
