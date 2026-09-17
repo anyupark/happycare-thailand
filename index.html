@@ -1611,6 +1611,8 @@ var FAQ = [
   function show(){ if(banner) banner.classList.add('show'); }
   function hide(){ if(banner) banner.classList.remove('show'); }
   var existing=read();
+  // TEMPORARY (user request 2026-09-17): GA loads without consent for tag testing. Self-expires; remove this line afterwards.
+  if(Date.now() < Date.parse('2026-09-18T12:00:00+07:00')) loadGA();
   if(existing){
     if(existing.fonts) loadFonts();
     if(existing.marketing){
