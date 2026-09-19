@@ -1689,8 +1689,6 @@ var FAQ = [
   }
   function syncSwitches(){ var st=read(), c=st ? choices(st) : all(false); switches.forEach(function(el){ el.checked=c[el.getAttribute('data-ck')]; }); }
   var existing=read();
-  // TEMPORARY (user request 2026-09-17): GA loads without consent for tag testing. Self-expires; remove this line afterwards.
-  if(Date.now() < Date.parse('2026-09-18T12:00:00+07:00')) loadGA();
   if(existing){
     if(existing.v>=CONSENT_V) applyConsent(choices(existing));
     else if(existing.marketing){ loadPixel(); setTimeout(show, 600); }   // older opt-in: ask again before the newer tools load
