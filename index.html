@@ -13,8 +13,29 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/thailand-nurse-portrait.webp">
-<!-- Google Fonts (Kanit, Noto Sans Thai, Montserrat, Poppins) จะโหลดหลังจากได้รับความยินยอม ดู cookie banner -->
+<!-- Kanit is served from this site (assets/fonts), so it needs no consent and no third-party request -->
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/kanit-thai-300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/kanit-thai-700.woff2" crossorigin>
 <style>
+@font-face{font-family:'Kanit';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/kanit-thai-300.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/kanit-latin-ext-300.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/kanit-latin-300.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/kanit-thai-400.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/kanit-latin-ext-400.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/kanit-latin-400.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/kanit-thai-500.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/kanit-latin-ext-500.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/kanit-latin-500.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/kanit-thai-600.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/kanit-latin-ext-600.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/kanit-latin-600.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/kanit-thai-700.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/kanit-latin-ext-700.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/kanit-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/kanit-thai-800.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/kanit-latin-ext-800.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+  @font-face{font-family:'Kanit';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/kanit-latin-800.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
   :root{
     --forest:#06513F;
     --deep:#0C5C4B;
@@ -1286,7 +1307,7 @@
 
 <!-- ============ COOKIE BANNER ============ -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="คุกกี้">
-  <p class="ck-text">🍪 เราใช้คุกกี้เพื่อให้เว็บไซต์แสดงผลได้ดี วิเคราะห์การใช้งาน และวัดผลโฆษณา</p>
+  <p class="ck-text">🍪 เราใช้คุกกี้เพื่อวิเคราะห์การใช้งานเว็บไซต์ และวัดผลโฆษณา</p>
   <div class="cookie-actions" id="ckMainActions">
     <button class="btn-ck btn-ck-accept" id="ckAccept" type="button">ยอมรับ</button>
     <button class="btn-ck btn-ck-reject" id="ckReject" type="button">ปฏิเสธ</button>
@@ -1297,10 +1318,6 @@
     <div class="ck-cat">
       <div class="ck-cat-head"><strong>จำเป็น</strong><span class="ck-always">เปิดตลอด</span></div>
       <p>จดจำการตั้งค่าคุกกี้ของคุณบนอุปกรณ์นี้ เพื่อไม่ต้องถามซ้ำ</p>
-    </div>
-    <div class="ck-cat">
-      <label class="ck-cat-head"><strong>การแสดงผล</strong><input type="checkbox" class="ck-switch" data-ck="fonts" aria-label="การแสดงผล"></label>
-      <p>ฟอนต์จาก Google Fonts ช่วยให้ตัวอักษรบนเว็บไซต์สวยงามและอ่านง่าย</p>
     </div>
     <div class="ck-cat">
       <label class="ck-cat-head"><strong>การวิเคราะห์</strong><input type="checkbox" class="ck-switch" data-ck="analytics" aria-label="การวิเคราะห์"></label>
@@ -1349,8 +1366,8 @@
       <h4><span class="th">แบบฟอร์มติดต่อ</span></h4>
       <p><span class="th">ข้อมูลที่คุณกรอกในแบบฟอร์ม (ชื่อ, เบอร์โทรศัพท์, LINE, อีเมล และข้อความ) จะถูกส่งอย่างปลอดภัยผ่านผู้ให้บริการ Web3Forms ไปยังกล่องอีเมลของเรา เพื่อใช้ในการติดต่อกลับและดำเนินการสมัครเท่านั้น เราจะไม่นำไปขาย และจะไม่เปิดเผยต่อบุคคลภายนอก ยกเว้นกรณีที่อธิบายไว้ในหัวข้อ X (Twitter) ด้านล่าง ซึ่งเกิดขึ้นเฉพาะเมื่อคุณให้ความยินยอมเท่านั้น</span>
          </p>
-      <h4><span class="th">Google Fonts</span></h4>
-      <p><span class="th">เมื่อคุณให้ความยินยอม เราจะโหลดฟอนต์จาก Google Fonts (Google Ireland Limited) ซึ่งอาจมีการส่ง IP ของคุณไปยัง Google คุณสามารถปฏิเสธได้ที่แถบคุกกี้</span>
+      <h4><span class="th">ฟอนต์</span></h4>
+      <p><span class="th">ฟอนต์ทั้งหมดบนเว็บไซต์นี้ถูกโหลดจากเซิร์ฟเวอร์ของเราเอง ไม่ได้โหลดจาก Google Fonts จึงไม่มีการส่งข้อมูลของคุณไปยังผู้ให้บริการภายนอกเพื่อการแสดงผลตัวอักษร</span>
          </p>
       <h4>Google Analytics</h4>
       <p>เมื่อคุณให้ความยินยอม เราใช้ Google Analytics 4 ของ Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, ไอร์แลนด์) เพื่อทำความเข้าใจว่าผู้เข้าชมใช้งานเว็บไซต์อย่างไร และนำไปปรับปรุงเว็บไซต์และโฆษณาของเรา เช่น จำนวนผู้เข้าชม แหล่งที่มา (เช่น โฆษณาที่คุณคลิก) ระยะเวลาการเข้าชม ส่วนของหน้าที่คุณเลื่อนไปถึง การเล่นวิดีโอ คำถามที่พบบ่อยที่คุณเปิดหรือค้นหา การคลิกปุ่มติดต่อ และขั้นตอนการกรอกแบบฟอร์ม (ไม่รวมข้อมูลที่คุณกรอกในแบบฟอร์ม) เครื่องมือนี้ตั้งคุกกี้และใช้ข้อมูลอุปกรณ์ เบราว์เซอร์ และตำแหน่งโดยประมาณ (ระดับประเทศหรือเมือง) Google Analytics 4 ไม่บันทึกหรือจัดเก็บหมายเลข IP ของคุณ และเราปิดการใช้ Google Signals และการปรับโฆษณาให้เหมาะกับบุคคลสำหรับข้อมูลนี้ ข้อมูลจะถูกเก็บไว้ไม่เกิน 14 เดือน และอาจมีการประมวลผลนอกสหภาพยุโรป รวมถึงสหรัฐอเมริกา ภายใต้ EU-US Data Privacy Framework และ Standard Contractual Clauses ของสหภาพยุโรป ฐานทางกฎหมายคือความยินยอมของคุณ (มาตรา 6(1)(a) GDPR) คุณสามารถปฏิเสธหรือถอนความยินยอมได้ทุกเมื่อผ่านปุ่ม &ldquo;จัดการคุกกี้&rdquo; ด้านล่าง โดยไม่กระทบต่อการใช้งานเว็บไซต์</p>
@@ -1601,20 +1618,11 @@ var FAQ = [
 /* ---------- GDPR consent: Google Fonts + Google Analytics + Meta Pixel + X Pixel (opt-in only) ---------- */
 (function(){
   var KEY='hc_th_consent';
-  var HREF='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap';
   var PIXEL_ID='2076486669922930';
   var X_PIXEL_ID='rfdh5';
   var X_PAGEVIEW_EVENT='tw-rfdh5-rfdhi';   // X Events manager: page view event
   var GA_ID='G-9ZKC7LMJYN';   // Google Analytics 4 property "HappyCare Thailand Website"; empty = off
   var CONSENT_V=4;   // bump when a tracker or the data it receives changes: earlier opt-ins never covered it, so ask again
-  var fontsLoaded=false;
-  function loadFonts(){
-    if(fontsLoaded) return; fontsLoaded=true;
-    var pc1=document.createElement('link'); pc1.rel='preconnect'; pc1.href='https://fonts.googleapis.com';
-    var pc2=document.createElement('link'); pc2.rel='preconnect'; pc2.href='https://fonts.gstatic.com'; pc2.crossOrigin='';
-    var l=document.createElement('link'); l.rel='stylesheet'; l.href=HREF;
-    document.head.appendChild(pc1); document.head.appendChild(pc2); document.head.appendChild(l);
-  }
   /* Meta Pixel is loaded ONLY after the visitor opts in — never on page load. */
   function loadPixel(){
     if(window.__hcPixel) return; window.__hcPixel=true;
@@ -1658,10 +1666,10 @@ var FAQ = [
   function setDetails(open){ if(!details) return; details.hidden=!open; if(mainActions) mainActions.hidden=open; if(moreBtn) moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
   function show(withDetails){ if(!banner) return; setDetails(!!withDetails); banner.classList.add('show'); }
   function hide(){ if(banner) banner.classList.remove('show'); }
-  function all(on){ return {fonts:on, analytics:on, marketing:on}; }
+  function all(on){ return {analytics:on, marketing:on}; }
   // Choices saved before the category switches existed had one yes/no for everything, so analytics follows marketing
-  function choices(c){ return {fonts:!!c.fonts, analytics:('analytics' in c) ? !!c.analytics : !!c.marketing, marketing:!!c.marketing}; }
-  function applyConsent(c){ if(c.fonts) loadFonts(); if(c.analytics) loadGA(); if(c.marketing){ loadPixel(); loadXPixel(); } }
+  function choices(c){ return {analytics:('analytics' in c) ? !!c.analytics : !!c.marketing, marketing:!!c.marketing}; }
+  function applyConsent(c){ if(c.analytics) loadGA(); if(c.marketing){ loadPixel(); loadXPixel(); } }
   function clearTrackingCookies(){
     var root='.'+location.hostname.split('.').slice(-2).join('.');
     document.cookie.split(';').forEach(function(part){
@@ -1673,10 +1681,10 @@ var FAQ = [
   }
   function save(c){
     var prev=read(), before=prev ? choices(prev) : null;
-    write({fonts:c.fonts, analytics:c.analytics, marketing:c.marketing, v:CONSENT_V});
+    write({analytics:c.analytics, marketing:c.marketing, v:CONSENT_V});
     hide();
     // Loaded scripts can't be unloaded: on withdrawal, clear their cookies and reload the page clean
-    if(before && ((before.fonts && !c.fonts) || (before.analytics && !c.analytics) || (before.marketing && !c.marketing))){ clearTrackingCookies(); location.reload(); return; }
+    if(before && ((before.analytics && !c.analytics) || (before.marketing && !c.marketing))){ clearTrackingCookies(); location.reload(); return; }
     applyConsent(c);
   }
   function syncSwitches(){ var st=read(), c=st ? choices(st) : all(false); switches.forEach(function(el){ el.checked=c[el.getAttribute('data-ck')]; }); }
@@ -1685,10 +1693,7 @@ var FAQ = [
   if(Date.now() < Date.parse('2026-09-18T12:00:00+07:00')) loadGA();
   if(existing){
     if(existing.v>=CONSENT_V) applyConsent(choices(existing));
-    else {
-      if(existing.fonts) loadFonts();
-      if(existing.marketing){ loadPixel(); setTimeout(show, 600); }   // older opt-in: ask again before the newer tools load
-    }
+    else if(existing.marketing){ loadPixel(); setTimeout(show, 600); }   // older opt-in: ask again before the newer tools load
   } else {
     setTimeout(show, 600);
   }
