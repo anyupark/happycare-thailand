@@ -3,9 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <script>
-/* Ad links sometimes point at /#apply. A fresh visit must start at the top (trust section, video) —
-   the in-page "สมัคร" buttons still jump to the form because they navigate after load. */
-(function(){ if(/^#(apply|leadForm)$/i.test(location.hash)){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} if('scrollRestoration' in history){ history.scrollRestoration='manual'; } window.addEventListener('load', function(){ window.scrollTo(0,0); }, {once:true}); } })();
+/* Ad links sometimes arrive with an anchor (e.g. /#apply). A fresh visit must start at the top (trust section, video),
+   whatever the anchor and whatever the browser. In-page buttons still work: they navigate after the visitor has touched the page. */
+(function(){
+  var touched=false;
+  ['pointerdown','touchstart','wheel','keydown'].forEach(function(ev){ addEventListener(ev, function(){ touched=true; }, {passive:true, capture:true}); });
+  function clean(){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} }
+  function top(){ if(touched) return; try{ window.scrollTo({top:0,left:0,behavior:'instant'}); }catch(e){ window.scrollTo(0,0); } }
+  function settle(){ top(); if(window.requestAnimationFrame) requestAnimationFrame(top); [0,50,150,400,900,1600].forEach(function(ms){ setTimeout(top, ms); }); }
+  if(location.hash){
+    clean();
+    if('scrollRestoration' in history){ history.scrollRestoration='manual'; }
+    addEventListener('DOMContentLoaded', top);
+    addEventListener('load', settle, {once:true});
+  }
+  // some in-app browsers apply the anchor only after the page has loaded
+  var t0=Date.now();
+  addEventListener('hashchange', function(){ if(!touched && Date.now()-t0<8000 && location.hash){ clean(); settle(); } });
+})();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HappyCare · เส้นทางพยาบาลไทย สู่ชีวิตใหม่ในออสเตรีย</title>
@@ -677,7 +692,7 @@
       <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
     </nav>
     <div class="nav-right">
-      <a href="#apply" class="nav-cta"><span class="th">ส่งใบสมัคร</span></a>
+      <a href="#apply-section" class="nav-cta"><span class="th">ส่งใบสมัคร</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="เมนู" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -687,7 +702,7 @@
     <a href="#opportunity"><span class="th">โอกาส</span></a>
     <a href="#process"><span class="th">ขั้นตอน</span></a>
     <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
-    <a href="#apply" class="btn btn-primary"><span class="th">ส่งใบสมัคร</span></a>
+    <a href="#apply-section" class="btn btn-primary"><span class="th">ส่งใบสมัคร</span></a>
   </div>
 </header>
 
@@ -709,7 +724,7 @@
         
       </p>
       <div class="hero-cta">
-        <a href="#apply" class="btn btn-lime"><span class="th">ส่งใบสมัคร</span>
+        <a href="#apply-section" class="btn btn-lime"><span class="th">ส่งใบสมัคร</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         <a href="#about" class="btn btn-ghost"><span class="th">รู้จักเราก่อน</span></a>
       </div>
@@ -1152,7 +1167,7 @@
 </section>
 
 <!-- ============ CTA + APPLY ============ -->
-<section class="cta" id="apply">
+<section class="cta" id="apply-section" data-section="apply">
   <div class="wrap cta-grid">
     <div>
       <span class="eyebrow on-dark"><span class="th">พร้อมเริ่มต้นแล้วหรือยัง</span></span>
@@ -1278,7 +1293,7 @@
         <a href="#opportunity"><span class="th">โอกาสและรายได้</span></a>
         <a href="#process"><span class="th">ขั้นตอน</span></a>
         <a href="#faq"><span class="th">คำถามที่พบบ่อย</span></a>
-        <a href="#apply"><span class="th">ส่งใบสมัคร</span></a>
+        <a href="#apply-section"><span class="th">ส่งใบสมัคร</span></a>
       </div>
       <div class="foot-col">
         <h4><span class="th">ติดต่อเรา</span></h4>
@@ -1908,7 +1923,7 @@ var FAQ = [
     if(el.closest('#mobileNav')) return 'mobile_menu';
     if(el.closest('header')) return 'header';
     var sec=el.closest('section[id], footer[id]');
-    return sec ? sec.id : 'other';
+    return sec ? (sec.getAttribute('data-section')||sec.id) : 'other';
   }
 
   // How far down the page people get: sections reached + scroll depth
@@ -1916,7 +1931,7 @@ var FAQ = [
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        if(e.isIntersecting && !seen[e.target.id]){ seen[e.target.id]=1; hcTrack('section_view', {section_name:e.target.id}); io.unobserve(e.target); }
+        if(e.isIntersecting && !seen[e.target.id]){ seen[e.target.id]=1; hcTrack('section_view', {section_name:(e.target.getAttribute('data-section')||e.target.id)}); io.unobserve(e.target); }
       });
     }, {rootMargin:'0px 0px -40% 0px'});
     document.querySelectorAll('section[id], footer[id]').forEach(function(sec){ io.observe(sec); });
@@ -1933,7 +1948,7 @@ var FAQ = [
     var a=e.target.closest('a[href]');
     if(a){
       var href=a.getAttribute('href'), loc=where(a), method='';
-      if(href.charAt(0)==='#' && href.length>1){ hcTrack(href==='#apply' ? 'apply_click' : 'nav_click', {link_target:href.slice(1), link_location:loc}); return; }
+      if(href.charAt(0)==='#' && href.length>1){ var tgt=href.slice(1).replace(/-section$/,''); hcTrack(tgt==='apply' ? 'apply_click' : 'nav_click', {link_target:tgt, link_location:loc}); return; }
       if(/lin\.ee|line\.me/.test(href)) method='line';
       else if(/instagram\.com/.test(href)) method='instagram';
       else if(/facebook\.com/.test(href)) method='facebook';
