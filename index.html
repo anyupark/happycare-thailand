@@ -1696,7 +1696,18 @@ var FAQ = [
     write({analytics:c.analytics, marketing:c.marketing, v:CONSENT_V});
     hide();
     // Loaded scripts can't be unloaded: on withdrawal, clear their cookies and reload the page clean
-    if(before && ((before.analytics && !c.analytics) || (before.marketing && !c.marketing))){ clearTrackingCookies(); location.reload(); return; }
+    if(before && ((before.analytics && !c.analytics) || (before.marketing && !c.marketing))){
+      clearTrackingCookies();
+      // Switch the loaded tools off in place. A reload would throw away everything the visitor has typed into the form.
+      if(!c.marketing){ try{ if(window.fbq) fbq('consent','revoke'); }catch(e){} window.twq=null; window.__hcPixel=false; window.__hcX=false; }
+      if(!c.analytics){ try{ if(window.gtag) gtag('consent','update',{analytics_storage:'denied'}); }catch(e){} window['ga-disable-'+GA_ID]=true; }
+      var lf=document.getElementById('leadForm');
+      var typed=!!lf && Array.prototype.some.call(lf.querySelectorAll('input,textarea'), function(el){
+        if(el.type==='hidden' || el.name==='botcheck') return false;
+        return (el.type==='radio'||el.type==='checkbox') ? el.checked : !!el.value; });
+      if(!typed) location.reload();   // nothing to lose: reload so the scripts are gone for good
+      return;
+    }
     applyConsent(c);
   }
   function syncSwitches(){ var st=read(), c=st ? choices(st) : all(true); switches.forEach(function(el){ el.checked=c[el.getAttribute('data-ck')]; }); }
