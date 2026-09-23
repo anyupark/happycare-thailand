@@ -2,6 +2,11 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+<script>
+/* Ad links sometimes point at /#apply. A fresh visit must start at the top (trust section, video) —
+   the in-page "สมัคร" buttons still jump to the form because they navigate after load. */
+(function(){ if(/^#(apply|leadForm)$/i.test(location.hash)){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} if('scrollRestoration' in history){ history.scrollRestoration='manual'; } window.addEventListener('load', function(){ window.scrollTo(0,0); }, {once:true}); } })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HappyCare · เส้นทางพยาบาลไทย สู่ชีวิตใหม่ในออสเตรีย</title>
 <meta name="description" content="โครงการพยาบาลไทยสู่ประเทศออสเตรีย โดย Happycare Recruitment GmbH องค์กรจัดหางานที่จดทะเบียนถูกต้องในออสเตรีย เรียนภาษาเยอรมันที่กรุงเทพฯ ดูแลวีซ่า ที่พัก และการย้ายครบวงจร โดยคุณไม่ต้องจ่ายค่าดำเนินการ">
